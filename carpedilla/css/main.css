@@ -1,0 +1,355 @@
+/*CSS for Mikkel Sandberg - Carpe Dilla: Home of the Gourmet Quesadilla*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*my styling*/
+
+/*general styles*/
+p {
+	line-height: 2em;
+}
+h2 {
+	font-weight: 700;
+	font-size: 2.5em;
+	color: #BD0502;
+	margin-bottom: 20px;
+}
+h3 {
+	font-size: 2em;
+	color: #24201E;
+	margin-bottom: 20px;
+}
+h4 {
+	font-style: italic;
+	font-size: 1.5em;
+	font-weight: 400;
+	color: #24201E;
+	margin-bottom: 10px;
+}
+.content {
+	font-family: "futura-pt", sans-serif;
+	padding-left: 200px;
+	clear: both;
+	text-align: center;
+}
+.content:last-of-type {
+	padding-bottom: 20px;
+}
+.wide_icon {
+	width: 150px;
+	margin: 100px 0;
+}
+.tall_icon {
+	height: 150px;
+	margin: 100px 0;
+}
+body {
+	width: 100%;
+	position: relative;
+	background-image: url("../images/background.png");
+	background-repeat: repeat;
+}
+
+/*nav side bar*/
+nav {
+	width: 200px;
+	height: 100%;
+	background: #24201E;
+	position: fixed;
+	z-index: 10;
+}
+#nav_logo {
+	text-align: center;
+	margin-top: 40px;
+}
+#nav_logo a img {
+	width: 75%;
+}
+#nav_section {
+	height: 100%;
+}
+#nav_ul {
+	/*vertically center nav ul; source: http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/*/
+	position: relative;
+	top: 35%;
+	-webkit-transform: translateY(-50%);
+}
+#nav_ul li {
+	margin: 20px 0;
+}
+#nav_ul li .active {
+	border-left: 5px solid #BD0502;
+	padding-left: 45px;
+}
+#nav_ul li a {
+	padding-left: 50px;
+	font-size: 24px;
+}
+#nav_ul li a:link {
+	font-family: "futura-pt", sans-serif;
+	color: #fff;
+	text-decoration: none;
+}
+#nav_ul li a:visited {
+	color: #fff;
+}
+#nav_ul li a:hover {
+	color: #BD0502;
+}
+#nav_logo_text a p {
+	line-height: 1em;
+}
+.icon_block a {
+	display: inline;
+}
+.icon {
+	color: #24201E;
+}
+.bg {
+	color: #fff;
+}
+
+/*contact popout*/
+#social_media_popout {
+	display: none;
+	z-index: -1;
+	position: absolute;
+	top: 150px;
+	left: 165px;
+	background-color: #24201E;
+	padding-right: 15px;
+}
+#nav_contact {
+	padding-right: 20px;
+}
+
+/*home section*/
+#home_text {
+	text-align: center;
+	background-image: url("../images/quesadilla.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	padding: 17% 0;
+}
+#home_text h1 {
+	color: #24201E;
+	font-size: 7.5em;
+	text-transform: uppercase;
+	text-align: center;
+	font-family: "futura-pt", sans-serif;
+	color: #24201E;
+	text-transform: uppercase;
+	text-align: center;
+	line-height: 1em;
+	background-color: rgba(255, 255, 255, .5);
+}
+#home_text h1#gourmet {
+	font-size: 10.1em;
+}
+#home_text h1#quesadilla {
+	font-size: 8.5em; 
+}
+
+/*media section*/
+#images {
+	text-align: center;
+	margin-top: 40px;
+}
+.image_gallery li {
+	margin-bottom: 20px;
+}
+.image_gallery li img {
+	width: 60%;
+}
+
+/*menu section*/
+.menu_extra_info {
+	color: #24201E;
+	font-size: 1.125em;
+	margin: 10px 0 20px 0;
+}
+.menu_ul {
+	margin: 0 auto 20px auto;
+	width: 90%;
+}
+.menu_ul li {
+	width: 33%;
+	display: inline-block;
+	vertical-align: text-top;
+}
+.item_name {
+	color: #723804;
+	font-weight: 700;
+	font-size: 1.5em;
+	text-align: left;
+}
+.item_desc {
+	color: #24201E;
+	font-size: 1.5em;
+	line-height: 28px;
+	text-align: left;
+}
+.item_price {
+	color: #24201E;
+	font-size: 1.5em;
+	text-align: right;
+}
+.sub_item {
+	margin-bottom: 20px;
+}
+#wine_title {
+	text-align: center;
+	font-size: 1em;
+}
+#wine_price {
+	font-size: 1em;
+}
+.tall_menu_sub_icon {
+	height: 100px;
+	margin: 50px 0;
+}
+.wide_menu_sub_icon {
+	width: 100px;
+	margin: 50px 0;
+}
+
+
+/*about section*/
+#about h3 {
+	margin-bottom: 10px;
+}
+ul#hours_location_article {
+	width: 83%;
+	margin: 0 auto 40px auto;
+}
+.about_p {
+	width: 50%;
+	text-align: left;
+	margin: 0 auto;
+}
+#about p {
+	font-family: "futura-pt", sans-serif;
+	font-weight: 700;
+	font-style: normal;
+	font-size: 1.125em;
+	padding-bottom: 20px;
+}
+#hours_location_article li {
+	display: inline-block;
+	vertical-align: top;
+	width: 20%;
+	text-align: center;
+}
+li#hours_li {
+	text-align: left;
+}
+li#phone_location_li {
+	margin-left: -5%;
+	margin-right: 5%;
+}
+li#map_li {
+	text-align: right;
+}
+#phone_location_li h3 {
+	margin-bottom: 60px;
+}
+#map_li img {
+	width: 100%;
+}
+
+/*footer*/
+footer a:link {
+	text-decoration: none;
+	color: #24201E;
+}
+footer a:visited {
+	color: #24201E;
+}
+footer a:hover {
+	color: #BD0502;
+}
+footer {
+	line-height: 1.75em;
+}
+
+/*responsive design*/
+@media screen and (max-width: 1680px) {
+	.menu_ul li {
+		width: 30%;
+	}
+	.menu_ul {
+		width: 100%;
+	}
+	.about_p {
+		width: 90%;
+	}
+	#hours_location_article li {
+		width: 30%;
+	}
+}
+
+@media screen and (max-width: 1280px) {
+	.image_gallery li img {
+		width: 80%;
+	}
+	.menu_ul li {
+		width: 32%;
+	}
+	.item_name {
+		font-size: 1.25em;
+	}
+	.item_desc {
+		font-size: 1.25em;
+	}
+	.item_price {
+		font-size: 1.25em;
+	}
+}
