@@ -7,55 +7,38 @@
   <meta name="Description" content="This is the personal website for Mikkel Sandberg. I am a web developer and dabble as a 3D artist. Here you can find my portofolio, resume and get in contact with me. Enjoy." />
   <title>Mikkel Sandberg | Web Development, 3D Animation, Design</title>
   <!-- link favicon -->
-  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-  <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+  <link rel="manifest" href="img/favicons/manifest.json">
+  <link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="theme-color" content="#ffffff">
   <!-- font awesome -->
-  <link rel="stylesheet" href="css/font-awesome.min.css" />
+  <link rel="stylesheet" href="stylesheets/font-awesome.min.css" />
   <!-- main styles -->
-  <link rel="stylesheet" href="css/main.css" />
-  <!-- javascript -->
-  <script src="js/vendor/jquery-1.11.3.min.js"></script>
-  <script src="js/vendor/jquery.typist.js"></script>
-  <script src="js/page.js"></script>
+  <link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <!--[if IE]>
+    <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <![endif]-->
 </head>
 
-<body>
+<body class="loading">
+  <div class="loadingText">
+    <h6>Loading</h6>
+    <p>Please Wait</p>
+  </div>
+
   <div id="topAnchor"></div>
 
   <div class="mainSplash" id="home">
-    <div class="imageBlock">
-      <div class="img1"></div>
-      <div class="img2"></div>
-      <div class="img3"></div>
-      <div class="img4"></div>
-      <div class="img5"></div>
-      <div class="img6"></div>
-    </div>
+    <div class="heroImage"></div>
     <h1>Hello,<br/>I'm Mikkel.<br/>I like <span id="what-i-like"></span></h1>
-    <a id="desktopNextArrow" href="#work" rel="nofollow">
-      <i class="next-arrow fa fa-angle-down fa-5x"></i>
-    </a>
-
-    <a id="mobileNextArrow" href="#mobileWork" rel="nofollow">
+    <a id="nextArrowOuter" href="#workTarget" rel="nofollow">
       <i class="next-arrow fa fa-angle-down fa-5x"></i>
     </a>
   </div>
     
-  <div class="afterSplash">
-    <nav>
-      <ul class="navUl">
-        <li><a href="#work" rel="nofollow">My Work</a></li>
-        <li><a href="#resume" rel="nofollow">R&eacute;sum&eacute;</a></li>
-        <li><a href="#about" rel="nofollow">About Me</a></li>
-      </ul>
-
-      <ul class="mobileNavUl">
-        <li><a href="#mobileWork" rel="nofollow">My Work</a></li>
-        <li><a href="#resume" rel="nofollow">R&eacute;sum&eacute;</a></li>
-        <li><a href="#about" rel="nofollow">About Me</a></li>
-      </ul>
-    </nav>
-
+  <div class="afterSplash" id="workTarget">
     <article class="contentArticle desktopWork" id="work">
       <h2>My Work</h2>
 
@@ -64,110 +47,78 @@
           <div class="prev carouselButton"></div>
           <div class="next carouselButton"></div>
           <div id="carousel">
-            <div id="1" class="image"></div>
-            <div id="2" class="image"></div>
-            <div id="3" class="image"></div>
-            <div id="4" class="image"></div>
-            <div id="5" class="image"></div>
-            <div id="6" class="image"></div>
+            <div id="apcEntertainment-carouselImage" class="image"></div>
+            <div id="animWork-carouselImage" class="image"></div>
+            <div id="moviePoster-carouselImage" class="image"></div>
+            <div id="personalId-carouselImage" class="image"></div>
+            <div id="friendQuest-carouselImage" class="image"></div>
           </div>
         </section>
       </div>
 
       <article class="descriptionBlock">
-        <section id="carpeDillaDescriptionSection" class="descriptionSection active" id="1">
-          <h3>Carpe Dilla</h3>
-          <p class="workDescription">For this project, I had to create a website for a fictitious company or event. I named mine Carpe Dilla, a restaurant that specializes in gourmet quesadillas; it is a play on words of the phrase "carpe diem," or "seize the day." You can see a live version of the site <a href="carpedilla/index.html" target="_blank">here</a>.</p>
+        <section id="apcEntertainmentDescriptionSection" class="descriptionSection">
+          <h3>APC Entertainment (Freelance)</h3>
+          <p class="workDescription">This was a website that I designed and coded for an acquaintance. The client was a DJ and needed a site that would showcase the services he provided, allow potential customers to get a price quote through an interactive "quote calculator," provide a way for users to book an event, display a media library, and have a contact form for general inquiries. You can check out the live site <a href="http://apcentertainment.net" target="_blank">here</a>.</p>
 
           <div class="moreSection">
             <h4>Tools Used</h4>
             <ul>
-              <li>HTML &amp; CSS</li>
-              <li>jQuery</li>
+              <li>Illustrator</li>
+              <li>Photoshop</li>
+              <li>HTML/Sass/JS</li>
             </ul>
 
-            <h4>Iterations</h4>
-            <a href="img/carpe-dilla/carpe-dilla-style-tile.jpg" target="_blank"><img src="img/carpe-dilla/carpe-dilla-style-tile.jpg" alt="carpe dilla style tile"></a>
-            <p class="iterationDescription">This is the style tile I made to help flesh out my ideas for how I wanted the site to look.</p>
-
-            <a href="img/carpe-dilla/carpe-dilla-mockup-v1-960-grid.jpg" target="_blank"><img src="img/carpe-dilla/carpe-dilla-mockup-v1-960-grid.jpg" alt="carpe dilla mockup v1 960 grid"></a>
-            <p class="iterationDescription">Carpe Dilla v1, using a 960px grid.</p>
-
-            <a href="img/carpe-dilla/carpe-dilla-mockup-v1-no-grid.jpg" target="_blank"><img src="img/carpe-dilla/carpe-dilla-mockup-v1-no-grid.jpg" alt="carpe dilla mockup v1 no grid"></a>
-            <p class="iterationDescription">Carpe Dilla v1, using a 960px grid (grid hidden).</p>
-
-            <a href="img/carpe-dilla/carpe-dilla-mockup-v2-1000-with-grid.jpg" target="_blank"><img src="img/carpe-dilla/carpe-dilla-mockup-v2-1000-with-grid.jpg" alt="carpe dilla mockup v2 1000 with grid"></a>
-            <p class="iterationDescription">Carpe Dilla v2, using a 1000px grid.</p>
-
-            <a href="img/carpe-dilla/carpe-dilla-mockup-v2-1000-no-grid.jpg" target="_blank"><img src="img/carpe-dilla/carpe-dilla-mockup-v2-1000-no-grid.jpg" alt="carpe dilla mockup v2 1000 no grid"></a>
-            <p class="iterationDescription">Carpe Dilla v2, using a 1000px grid (grid hidden).</p>
-          </div>
-
-          <p class="showMore"><a class="showMoreLink" href="#carpeDillaDescriptionSection">Show more.</a></p>
-          <p class="showLess"><a class="showLessLink" href="#work" rel="nofollow">Show less.</a></p>
-        </section>
-
-        <section id="3dDescriptionSection" class="descriptionSection" id="2">
-          <h3>3D Demo Reel</h3>
-          <p class="workDescription">This is my current 3D animation demo reel on <a href="//vimeo.com/95346384" target="_blank">Vimeo</a>. Most of these are personal projects to practice and develop my skills, ranging from fluid simulations to create fire effects, to original character concepts.</p>
-
-          <div class="moreSection">
-            <h4>Tools Used</h4>
-            <ul>
-              <li>Maya</li>
-            </ul>
-
-            <h4>Iterations</h4>
-            <a href="img/3d-work/spartan-v1-render.jpg" target="_blank"><img src="img/3d-work/spartan-v1-render.jpg" alt="spartan v1 render"></a>
-            <p class="iterationDescription">This was the original concept for this project.</p>
-
-            <a href="img/3d-work/spartan-v2-render.jpg" target="_blank"><img src="img/3d-work/spartan-v2-render.jpg" alt="spartan v2 render"></a>
-            <p class="iterationDescription">An alternate form of the original; this one is a more stealthy version.</p>
-
-            <a href="img/3d-work/spartan-v3-render.jpg" target="_blank"><img src="img/3d-work/spartan-v3-render.jpg" alt="spartan v3 render"></a>
-            <p class="iterationDescription">Here is an archer version of the Cyber Spartan</p>
-
-            <a href="img/3d-work/spartan-v4-render.jpg" target="_blank"><img src="img/3d-work/spartan-v4-render.jpg" alt="spartan v4 render"></a>
-            <p class="iterationDescription">And now a more mechanical version of the original concept. You can see a short I made using this character on <a href="//vimeo.com/113687379" target="_blank">Vimeo</a>.</p>
+            <h4>Mockup Design</h4>
+            <a href="img/apc-entertainment/apc-entertainment-mockup.jpg" target="_blank" rel="nofollow"><img src="img/apc-entertainment/apc-entertainment-mockup.jpg" alt="apc entertainment design"></a>
+            <p class="iterationDescription">This is the mockup that I made for the client for this project.</p>
           </div>
           
-          <p class="showMore"><a class="showMoreLink" href="#3dDescriptionSection">Show more.</a></p>
+          <p class="showMore"><a class="showMoreLink" href="#apcEntertainmentDescriptionSection" rel="nofollow">Show more.</a></p>
           <p class="showLess"><a class="showLessLink" href="#work" rel="nofollow">Show less.</a></p>
         </section>
 
-        <section id="fireSwingDescriptionSection" class="descriptionSection" id="3">
-          <h3>FireSwing Splash Screen</h3>
-          <p class="workDescription">FireSwing Studios was a start up that I worked at for a couple summers. This was intended to be a splash screen for the app that we were working on. Although this splash screen was never implemented, it is still one of my favorite things that I have made.</p>
+        <section id="3dDescriptionSection" class="descriptionSection active">
+          <h3>3D Work (Professional and Personal Projects)</h3>
+          <p class="workDescription">You can find my current 3D animation demo reel on <a href="//vimeo.com/95346384" target="_blank">Vimeo</a>. Most of these are personal projects to practice and develop my skills, ranging from fluid simulations to create fire effects, to original character concepts. FireSwing Studios was a start up that I worked at for a couple summers. I created a 3D rendered splash screen for the app that we were working on. Although this splash screen was never implemented, it is still one of my favorite things that I have made.</p>
 
           <div class="moreSection">
             <h4>Tools Used</h4>
             <ul>
               <li>Maya</li>
+              <li>Premier</li>
             </ul>
 
-            <h4>Iterations</h4>
-            <a href="img/splash-screen/fireswing-v1.jpg" target="_blank"><img src="img/splash-screen/fireswing-v1.jpg" alt="fireswing v1"></a>
+            <h4>Cyber Spartan (Personal Project)</h4>
+            <a href="img/3d-work/spartan-v1-render.jpg" target="_blank" rel="nofollow"><img src="img/3d-work/spartan-v1-render.jpg" alt="spartan v1 render"></a>
+            <a href="img/3d-work/spartan-v2-render.jpg" target="_blank" rel="nofollow"><img src="img/3d-work/spartan-v2-render.jpg" alt="spartan v2 render"></a>
+            <a href="img/3d-work/spartan-v3-render.jpg" target="_blank" rel="nofollow"><img src="img/3d-work/spartan-v3-render.jpg" alt="spartan v3 render"></a>
+            <a href="img/3d-work/spartan-v4-render.jpg" target="_blank" rel="nofollow"><img src="img/3d-work/spartan-v4-render.jpg" alt="spartan v4 render"></a>
+            <p class="iterationDescription">These are some variations of a "cyber spartan" character that I created.</p>
+
+            <h4>FireSwing Studios (Splash Screen)</h4>
+            <a href="img/fireswing-splash/fireswing-v1.jpg" target="_blank" rel="nofollow"><img src="img/fireswing-splash/fireswing-v1.jpg" alt="fireswing v1"></a>
             <p class="iterationDescription">This is the first version of the splash screen. I was still experimenting with the fluid dynamics to get the right look for the flame.</p>
 
-            <a href="img/splash-screen/fireswing-v2.jpg" target="_blank"><img src="img/splash-screen/fireswing-v2.jpg" alt="fireswing v2"></a>
+            <a href="img/fireswing-splash/fireswing-v2.jpg" target="_blank" rel="nofollow"><img src="img/fireswing-splash/fireswing-v2.jpg" alt="fireswing v2"></a>
             <p class="iterationDescription">At this point, I had fine-tuned the fluid effects to get the desired look for the flames.</p>
 
-            <a href="img/splash-screen/fireswing-v3.jpg" target="_blank"><img src="img/splash-screen/fireswing-v3.jpg" alt="fireswing v3"></a>
+            <a href="img/fireswing-splash/fireswing-v3.jpg" target="_blank" rel="nofollow"><img src="img/fireswing-splash/fireswing-v3.jpg" alt="fireswing v3"></a>
             <p class="iterationDescription">We wanted to try a lighter colored background.</p>
 
-            <a href="img/splash-screen/fireswing-v4.jpg" target="_blank"><img src="img/splash-screen/fireswing-v4.jpg" alt="fireswing v4"></a>
+            <a href="img/fireswing-splash/fireswing-v4.jpg" target="_blank" rel="nofollow"><img src="img/fireswing-splash/fireswing-v4.jpg" alt="fireswing v4"></a>
             <p class="iterationDescription">It was requested to have a glass-breaking effect, just to see how it would look.</p>
 
-            <a href="img/splash-screen/fireswing-final.jpg" target="_blank"><img src="img/splash-screen/fireswing-final.jpg" alt="fireswing final"></a>
+            <a href="img/fireswing-splash/fireswing-final.jpg" target="_blank" rel="nofollow"><img src="img/fireswing-splash/fireswing-final.jpg" alt="fireswing final"></a>
             <p class="iterationDescription">This is a screenshot of the final render. You can see the full animation in my demo reel on <a href="//vimeo.com/95346384" target="_blank">Vimeo</a>.</p>
           </div>
           
-          <p class="showMore"><a class="showMoreLink" href="#fireSwingDescriptionSection">Show more.</a></p>
+          <p class="showMore"><a class="showMoreLink" href="#3dDescriptionSection" rel="nofollow">Show more.</a></p>
           <p class="showLess"><a class="showLessLink" href="#work" rel="nofollow">Show less.</a></p>
         </section>
 
-        <section id="moviePosterDescriptionSection" class="descriptionSection" id="4">
-          <h3>Movie Poster Mockup</h3>
+        <section id="moviePosterDescriptionSection" class="descriptionSection">
+          <h3>Movie Poster Mockup (School Project)</h3>
           <p class="workDescription">I had a class design project to create a movie poster for a fictitious film. I was only limited by the titles and images I could use; I could use these however I saw fit; there were other constraints, like needing to use a certain format for the bottom copy and movie rating graphics.</p>
 
           <div class="moreSection">
@@ -179,22 +130,22 @@
             </ul>
 
             <h4>Iterations</h4>
-            <a href="img/movie-poster/msandberg-218-movie-poster-v1.jpg" target="_blank"><img src="img/movie-poster/msandberg-218-movie-poster-v1.jpg" alt="msandberg 218 movie poster v1"></a>
+            <a href="img/movie-poster/msandberg-218-movie-poster-v1.jpg" target="_blank" rel="nofollow"><img src="img/movie-poster/msandberg-218-movie-poster-v1.jpg" alt="msandberg 218 movie poster v1"></a>
             <p class="iterationDescription">This was my first pass at this poster.</p>
 
-            <a href="img/movie-poster/msandberg-218-movie-poster-v2.jpg" target="_blank"><img src="img/movie-poster/msandberg-218-movie-poster-v2.jpg" alt="msandberg 218 movie poster v2"></a>
+            <a href="img/movie-poster/msandberg-218-movie-poster-v2.jpg" target="_blank" rel="nofollow"><img src="img/movie-poster/msandberg-218-movie-poster-v2.jpg" alt="msandberg 218 movie poster v2"></a>
             <p class="iterationDescription">Playing with alignment, spacing and overall size of the elements.</p>
 
-            <a href="img/movie-poster/msandberg-218-movie-poster-final.jpg" target="_blank"><img src="img/movie-poster/msandberg-218-movie-poster-final.jpg" alt="msandberg 218 movie poster final"></a>
+            <a href="img/movie-poster/msandberg-218-movie-poster-final.jpg" target="_blank" rel="nofollow"><img src="img/movie-poster/msandberg-218-movie-poster-final.jpg" alt="msandberg 218 movie poster final"></a>
             <p class="iterationDescription">This was the final product, complete with blood-spatter graphic.</p>
           </div>
           
-          <p class="showMore"><a class="showMoreLink" href="#moviePosterDescriptionSection">Show more.</a></p>
+          <p class="showMore"><a class="showMoreLink" href="#moviePosterDescriptionSection" rel="nofollow">Show more.</a></p>
           <p class="showLess"><a class="showLessLink" href="#work" rel="nofollow">Show less.</a></p>
         </section>
 
-        <section id="personalIdDescriptionSection" class="descriptionSection" id="5">
-          <h3>Personal Identity &amp; Branding</h3>
+        <section id="personalIdDescriptionSection" class="descriptionSection">
+          <h3>Personal Identity &amp; Branding (School Project)</h3>
           <p class="workDescription">These are design ideas for a personal identity and brand for myself. It includes business cards, letterhead and an address label for envelopes. It was originally an assignment for a class, and all designs had to use good typography techniques.</p>
 
           <div class="moreSection">
@@ -206,42 +157,39 @@
             </ul>
 
             <h4>Iterations</h4>
-            <a href="img/personal-id/personal-id-v1.jpg" target="_blank"><img src="img/personal-id/personal-id-v1.jpg" alt="personal id v1"></a>
+            <a href="img/personal-id/personal-id-v1.jpg" target="_blank" rel="nofollow"><img src="img/personal-id/personal-id-v1.jpg" alt="personal id v1"></a>
             <p class="iterationDescription">These were some of the initial ideas I had for my personal branding.</p>
 
-            <a href="img/personal-id/personal-id-v2.jpg" target="_blank"><img src="img/personal-id/personal-id-v2.jpg" alt="personal id v2"></a>
+            <a href="img/personal-id/personal-id-v2.jpg" target="_blank" rel="nofollow"><img src="img/personal-id/personal-id-v2.jpg" alt="personal id v2"></a>
             <p class="iterationDescription">After some refining, I came up with some ideas for business cards.</p>
 
-            <a href="img/personal-id/personal-id-final1.jpg" target="_blank"><img src="img/personal-id/personal-id-final1.jpg" alt="personal id final 1"></a>
+            <a href="img/personal-id/personal-id-final1.jpg" target="_blank" rel="nofollow"><img src="img/personal-id/personal-id-final1.jpg" alt="personal id final 1"></a>
             <p class="iterationDescription">This is one of the final designs I settled on for letterhead, business cards and stationary.</p>
 
-            <a href="img/personal-id/personal-id-final2.jpg" target="_blank"><img src="img/personal-id/personal-id-final2.jpg" alt="personal id final 2"></a>
+            <a href="img/personal-id/personal-id-final2.jpg" target="_blank" rel="nofollow"><img src="img/personal-id/personal-id-final2.jpg" alt="personal id final 2"></a>
             <p class="iterationDescription">And another final design.</p>
           </div>
           
-          <p class="showMore"><a class="showMoreLink" href="#personalIdDescriptionSection">Show more.</a></p>
+          <p class="showMore"><a class="showMoreLink" href="#personalIdDescriptionSection" rel="nofollow">Show more.</a></p>
           <p class="showLess"><a class="showLessLink" href="#work" rel="nofollow">Show less.</a></p>
         </section>
 
-        <section id="dpsFolioDescriptionSection" class="descriptionSection" id="6">
-          <h3>DPS Folio Design</h3>
-          <p class="workDescription">The purpose of this project was to create an interactive PDF for viewing on an iPad. The design could be anything of my choice, as long as it incorporated a certain amount of interactivity and had all essential information.</p>
+        <section id="friendQuestDescriptionSection" class="descriptionSection">
+          <h3>Friend Quest (Podcast)</h3>
+          <p class="workDescription">Friend Quest is a podcast that I do with my friends where we play tabletop role playing games. We each record our audio separately and then I edit all of the tracks in Audition to get the final cut. Then, I add the intro and outro music, record voiceovers for the intro and outro, and add some basic EQ and noise filtering. Finally, I export the final audio and bring it into Premier to create a video version of the episode as well. The cover artwork was done by <a href="http://www.peterfreeby.com/" target="_blank">Peter Freeby</a>.</p>
 
           <div class="moreSection">
             <h4>Tools Used</h4>
             <ul>
-              <li>InDesign</li>
-              <li>InDesign DPS Folio Tools</li>
-              <li>Photoshop</li>
-              <li>Illustrator</li>
+              <li>Audition</li>
+              <li>Premier</li>
             </ul>
 
-            <h4>Iterations</h4>
-            <a href="img/mockups/dps-mockup.jpg" target="_blank"><img src="img/mockups/dps-mockup.jpg" alt="dps folio design"></a>
-            <p class="iterationDescription">This is a screenshot of the interactive PDF I made in InDesign using the DPS Folio tools.</p>
+            <h4>Episodes</h4>
+            <iframe id="multi_iframe" class="friendQuestPlayer" frameborder="0" scrolling="no" allowfullscreen="" src="https://www.podbean.com/media/player/multi?playlist=http%3A%2F%2Fplaylist.podbean.com%2F1730596%2Fplaylist_multi.xml&vjs=1&kdsowie31j4k1jlf913=8f584dfca005a2747835a5a5d02cab7dd7b51145&size=315&share=1&fonts=Helvetica&auto=0&download=0&rtl=0&skin=11" width="100%" height="505"></iframe>
           </div>
-          
-          <p class="showMore"><a class="showMoreLink" href="#dpsFolioDescriptionSection">Show more.</a></p>
+
+          <p class="showMore"><a class="showMoreLink" href="#friendQuestDescriptionSection" rel="nofollow">Show more.</a></p>
           <p class="showLess"><a class="showLessLink" href="#work" rel="nofollow">Show less.</a></p>
         </section>
       </article>
@@ -251,103 +199,91 @@
       <h2>My Work</h2>
 
       <section class="mobileWorkSection">
-        <div id="carpeDillaWorkBlock" class="workBlock">
-            <img src="img/mockups/carpe-dilla-desk-mockup.jpg" alt="img 6" />
-            <h3>Carpe Dilla</h3>
-            <p class="workDescription">For this project, I had to create a website for a fictitious company or event. I named mine Carpe Dilla, a restaurant that specializes in gourmet quesadillas; it is a play on words of the phrase "carpe diem," or "seize the day." You can see a live version of the site <a href="carpedilla/index.html" target="_blank">here</a>.</p>
+        <div id="apcEntertainmentBlock" class="workBlock">
+          <a href="http://apcentertainment.net" target="_blank"><img src="img/mockups/apc-entertainment.png" alt="apc entertainment mockup" /></a>
+          <h3>APC Entertainment (Freelance)</h3>
+          <p class="workDescription">This was a website that I designed and coded for an acquaintance. The client was a DJ and needed a site that would showcase the services he provided, allow potential customers to get a price quote through an interactive "quote calculator," provide a way for users to book an event, display a media library, and have a contact form for general inquiries. You can check out the live site <a href="http://apcentertainment.net" target="_blank">here</a>.</p>
 
-            <div class="moreSection">
-              <h4>Tools Used</h4>
-              <ul>
-                <li>HTML &amp; CSS</li>
-                <li>jQuery</li>
-              </ul>
+          <div class="moreSection">
+            <h4>Tools Used</h4>
+            <ul>
+              <li>Illustrator</li>
+              <li>Photoshop</li>
+              <li>HTML/Sass/JS</li>
+            </ul>
 
-              <h4>Iterations</h4>
-              <a href="img/carpe-dilla/carpe-dilla-style-tile.jpg" target="_blank"><img src="img/carpe-dilla/carpe-dilla-style-tile.jpg" alt="carpe dilla style tile"></a>
-              <p class="iterationDescription">This is the style tile I made to help flesh out my ideas for how I wanted the site to look.</p>
+            <h4>Mockup Design</h4>
+            <a href="img/apc-entertainment/apc-entertainment-mockup.jpg" target="_blank" rel="nofollow"><img src="img/apc-entertainment/apc-entertainment-mockup.jpg" alt="apc entertainment design"></a>
+            <p class="iterationDescription">This is the mockup that I made for the client for this project.</p>
+          </div>
+          
+          <p class="showMore"><a class="showMoreLink" href="#apcEntertainmentBlock" rel="nofollow">Show more.</a></p>
+          <p class="showLess"><a class="showLessLink" href="#apcEntertainmentBlock" rel="nofollow">Show less.</a></p>
+        </div>
 
-              <a href="img/carpe-dilla/carpe-dilla-mockup-v1-960-grid.jpg" target="_blank"><img src="img/carpe-dilla/carpe-dilla-mockup-v1-960-grid.jpg" alt="carpe dilla mockup v1 960 grid"></a>
-              <p class="iterationDescription">Carpe Dilla v1, using a 960px grid.</p>
+        <div id="friendQuestBlock" class="workBlock">
+          <img src="img/mockups/friend-quest.png" alt="friend quest mockup" />
+          <h3>Friend Quest (Podcast)</h3>
+          <p class="workDescription">Friend Quest is a podcast that I do with my friends where we play tabletop role playing games. We each record our audio separately and then I edit all of the tracks in Audition to get the final cut. Then, I add the intro and outro music, record voiceovers for the intro and outro, and add some basic EQ and noise filtering. Finally, I export the final audio and bring it into Premier to create a video version of the episode as well. The cover artwork was done by <a href="http://www.peterfreeby.com/" target="_blank">Peter Freeby</a>.</p>
 
-              <a href="img/carpe-dilla/carpe-dilla-mockup-v1-no-grid.jpg" target="_blank"><img src="img/carpe-dilla/carpe-dilla-mockup-v1-no-grid.jpg" alt="carpe dilla mockup v1 no grid"></a>
-              <p class="iterationDescription">Carpe Dilla v1, using a 960px grid (grid hidden).</p>
+          <div class="moreSection">
+            <h4>Tools Used</h4>
+            <ul>
+              <li>Audition</li>
+              <li>Premier</li>
+            </ul>
 
-              <a href="img/carpe-dilla/carpe-dilla-mockup-v2-1000-with-grid.jpg" target="_blank"><img src="img/carpe-dilla/carpe-dilla-mockup-v2-1000-with-grid.jpg" alt="carpe dilla mockup v2 1000 with grid"></a>
-              <p class="iterationDescription">Carpe Dilla v2, using a 1000px grid.</p>
-
-              <a href="img/carpe-dilla/carpe-dilla-mockup-v2-1000-no-grid.jpg" target="_blank"><img src="img/carpe-dilla/carpe-dilla-mockup-v2-1000-no-grid.jpg" alt="carpe dilla mockup v2 1000 no grid"></a>
-              <p class="iterationDescription">Carpe Dilla v2, using a 1000px grid (grid hidden).</p>
-            </div>
-            
-            <p class="showMore"><a class="showMoreLink" href="#carpeDillaWorkBlock">Show more.</a></p>
-            <p class="showLess"><a class="showLessLink" href="#carpeDillaWorkBlock" rel="nofollow">Show less.</a></p>
+            <h4>Episodes</h4>
+            <iframe id="multi_iframe" class="friendQuestPlayer" frameborder="0" scrolling="no" allowfullscreen="" src="https://www.podbean.com/media/player/multi?playlist=http%3A%2F%2Fplaylist.podbean.com%2F1730596%2Fplaylist_multi.xml&vjs=1&kdsowie31j4k1jlf913=8f584dfca005a2747835a5a5d02cab7dd7b51145&size=240&share=1&fonts=Helvetica&auto=0&download=0&rtl=0&skin=11" width="100%" height="430"></iframe>
+          </div>
+          
+          <p class="showMore"><a class="showMoreLink" href="#friendQuestBlock" rel="nofollow">Show more.</a></p>
+          <p class="showLess"><a class="showLessLink" href="#friendQuestBlock" rel="nofollow">Show less.</a></p>
         </div>
 
         <div id="3dWorkBlock" class="workBlock">
           <img src="img/mockups/anim-work-mockup.jpg" alt="img 1" />
-          <h3>3D Demo Reel</h3>
-          <p class="workDescription">This is my current 3D animation demo reel (on Vimeo). Most of these are personal projects to practice and develop my skills, ranging from fluid simulations to create fire effects, to original character concepts.</p>
+          <h3>3D Work (Professional and Personal Projects)</h3>
+          <p class="workDescription">You can find my current 3D animation demo reel on <a href="//vimeo.com/95346384" target="_blank">Vimeo</a>. Most of these are personal projects to practice and develop my skills, ranging from fluid simulations to create fire effects, to original character concepts. FireSwing Studios was a start up that I worked at for a couple summers. I created a 3D rendered splash screen for the app that we were working on. Although this splash screen was never implemented, it is still one of my favorite things that I have made.</p>
 
           <div class="moreSection">
             <h4>Tools Used</h4>
             <ul>
               <li>Maya</li>
+              <li>Premier</li>
             </ul>
 
-            <h4>Iterations</h4>
-            <a href="img/3d-work/spartan-v1-render.jpg" target="_blank"><img src="img/3d-work/spartan-v1-render.jpg" alt="spartan v1 render"></a>
-            <p class="iterationDescription">This was the original concept for this project.</p>
+            <h4>Cyber Spartan (Personal Project)</h4>
+            <a href="img/3d-work/spartan-v1-render.jpg" target="_blank" rel="nofollow"><img src="img/3d-work/spartan-v1-render.jpg" alt="spartan v1 render"></a>
+            <a href="img/3d-work/spartan-v2-render.jpg" target="_blank" rel="nofollow"><img src="img/3d-work/spartan-v2-render.jpg" alt="spartan v2 render"></a>
+            <a href="img/3d-work/spartan-v3-render.jpg" target="_blank" rel="nofollow"><img src="img/3d-work/spartan-v3-render.jpg" alt="spartan v3 render"></a>
+            <a href="img/3d-work/spartan-v4-render.jpg" target="_blank" rel="nofollow"><img src="img/3d-work/spartan-v4-render.jpg" alt="spartan v4 render"></a>
+            <p class="iterationDescription">These are some variations of a "cyber spartan" character that I created.</p>
 
-            <a href="img/3d-work/spartan-v2-render.jpg" target="_blank"><img src="img/3d-work/spartan-v2-render.jpg" alt="spartan v2 render"></a>
-            <p class="iterationDescription">An alternate form of the original; this one is a more stealthy version.</p>
-
-            <a href="img/3d-work/spartan-v3-render.jpg" target="_blank"><img src="img/3d-work/spartan-v3-render.jpg" alt="spartan v3 render"></a>
-            <p class="iterationDescription">Here is an archer version of the Cyber Spartan</p>
-
-            <a href="img/3d-work/spartan-v4-render.jpg" target="_blank"><img src="img/3d-work/spartan-v4-render.jpg" alt="spartan v4 render"></a>
-            <p class="iterationDescription">And now a more mechanical version of the original concept. You can see a short I made using this character on <a href="//vimeo.com/113687379" target="_blank">Vimeo</a>.</p>
-          </div>
-          
-          <p class="showMore"><a class="showMoreLink" href="#3dWorkBlock">Show more.</a></p>
-          <p class="showLess"><a class="showLessLink" href="#3dWorkBlock" rel="nofollow">Show less.</a></p>
-        </div>
-
-        <div id="fireSwingWorkBlock" class="workBlock">
-          <img src="img/mockups/fireswing-final.jpg" alt="img 2" />
-          <h3>FireSwing Splash Screen</h3>
-          <p class="workDescription">FireSwing Studios was a start up that I worked at for a couple summers. This was intended to be a splash screen for the app that we were working on. Although this splash screen was never implemented, it is still one of my favorite things that I have made.</p>
-
-          <div class="moreSection">
-            <h4>Tools Used</h4>
-            <ul>
-              <li>Maya</li>
-            </ul>
-
-            <h4>Iterations</h4>
-            <a href="img/splash-screen/fireswing-v1.jpg" target="_blank"><img src="img/splash-screen/fireswing-v1.jpg" alt="fireswing v1"></a>
+            <h4>FireSwing Studios (Splash Screen)</h4>
+            <a href="img/fireswing-splash/fireswing-v1.jpg" target="_blank" rel="nofollow"><img src="img/fireswing-splash/fireswing-v1.jpg" alt="fireswing v1"></a>
             <p class="iterationDescription">This is the first version of the splash screen. I was still experimenting with the fluid dynamics to get the right look for the flame.</p>
 
-            <a href="img/splash-screen/fireswing-v2.jpg" target="_blank"><img src="img/splash-screen/fireswing-v2.jpg" alt="fireswing v2"></a>
+            <a href="img/fireswing-splash/fireswing-v2.jpg" target="_blank" rel="nofollow"><img src="img/fireswing-splash/fireswing-v2.jpg" alt="fireswing v2"></a>
             <p class="iterationDescription">At this point, I had fine-tuned the fluid effects to get the desired look for the flames.</p>
 
-            <a href="img/splash-screen/fireswing-v3.jpg" target="_blank"><img src="img/splash-screen/fireswing-v3.jpg" alt="fireswing v3"></a>
+            <a href="img/fireswing-splash/fireswing-v3.jpg" target="_blank" rel="nofollow"><img src="img/fireswing-splash/fireswing-v3.jpg" alt="fireswing v3"></a>
             <p class="iterationDescription">We wanted to try a lighter colored background.</p>
 
-            <a href="img/splash-screen/fireswing-v4.jpg" target="_blank"><img src="img/splash-screen/fireswing-v4.jpg" alt="fireswing v4"></a>
+            <a href="img/fireswing-splash/fireswing-v4.jpg" target="_blank" rel="nofollow"><img src="img/fireswing-splash/fireswing-v4.jpg" alt="fireswing v4"></a>
             <p class="iterationDescription">It was requested to have a glass-breaking effect, just to see how it would look.</p>
 
-            <a href="img/splash-screen/fireswing-final.jpg" target="_blank"><img src="img/splash-screen/fireswing-final.jpg" alt="fireswing final"></a>
+            <a href="img/fireswing-splash/fireswing-final.jpg" target="_blank" rel="nofollow"><img src="img/fireswing-splash/fireswing-final.jpg" alt="fireswing final"></a>
             <p class="iterationDescription">This is a screenshot of the final render. You can see the full animation in my demo reel on <a href="//vimeo.com/95346384" target="_blank">Vimeo</a>.</p>
           </div>
           
-          <p class="showMore"><a class="showMoreLink" href="#fireSwingWorkBlock">Show more.</a></p>
-          <p class="showLess"><a class="showLessLink" href="#fireSwingWorkBlock" rel="nofollow">Show less.</a></p>
+          <p class="showMore"><a class="showMoreLink" href="#3dWorkBlock" rel="nofollow">Show more.</a></p>
+          <p class="showLess"><a class="showLessLink" href="#3dWorkBlock" rel="nofollow">Show less.</a></p>
         </div>
 
         <div id="moviePosterWorkBlock" class="workBlock">
           <img src="img/mockups/movie-poster-mockup.jpg" alt="img 3" />
-          <h3>Movie Poster Mockup</h3>
+          <h3>Movie Poster Mockup (School Project)</h3>
           <p class="workDescription">I had a class design project to create a movie poster for a fictitious film. I was only limited by the titles and images I could use; I could use these however I saw fit; there were other constraints, like needing to use a certain format for the bottom copy and movie rating graphics.</p>
 
           <div class="moreSection">
@@ -359,23 +295,23 @@
             </ul>
 
             <h4>Iterations</h4>
-            <a href="img/movie-poster/msandberg-218-movie-poster-v1.jpg" target="_blank"><img src="img/movie-poster/msandberg-218-movie-poster-v1.jpg" alt="msandberg 218 movie poster v1"></a>
+            <a href="img/movie-poster/msandberg-218-movie-poster-v1.jpg" target="_blank" rel="nofollow"><img src="img/movie-poster/msandberg-218-movie-poster-v1.jpg" alt="msandberg 218 movie poster v1"></a>
             <p class="iterationDescription">This was my first pass at this poster.</p>
 
-            <a href="img/movie-poster/msandberg-218-movie-poster-v2.jpg" target="_blank"><img src="img/movie-poster/msandberg-218-movie-poster-v2.jpg" alt="msandberg 218 movie poster v2"></a>
+            <a href="img/movie-poster/msandberg-218-movie-poster-v2.jpg" target="_blank" rel="nofollow"><img src="img/movie-poster/msandberg-218-movie-poster-v2.jpg" alt="msandberg 218 movie poster v2"></a>
             <p class="iterationDescription">Playing with alignment, spacing and overall size of the elements.</p>
 
-            <a href="img/movie-poster/msandberg-218-movie-poster-final.jpg" target="_blank"><img src="img/movie-poster/msandberg-218-movie-poster-final.jpg" alt="msandberg 218 movie poster final"></a>
+            <a href="img/movie-poster/msandberg-218-movie-poster-final.jpg" target="_blank" rel="nofollow"><img src="img/movie-poster/msandberg-218-movie-poster-final.jpg" alt="msandberg 218 movie poster final"></a>
             <p class="iterationDescription">This was the final product, complete with blood-spatter graphic.</p>
           </div>
           
-          <p class="showMore"><a class="showMoreLink" href="#moviePosterWorkBlock">Show more.</a></p>
+          <p class="showMore"><a class="showMoreLink" href="#moviePosterWorkBlock" rel="nofollow">Show more.</a></p>
           <p class="showLess"><a class="showLessLink" href="#moviePosterWorkBlock" rel="nofollow">Show less.</a></p>
         </div>
 
         <div id="personalIdWorkBlock" class="workBlock">
           <img src="img/mockups/personal-id-mockup.jpg" alt="img 4" />
-          <h3>Personal Identity &amp; Branding</h3>
+          <h3>Personal Identity &amp; Branding (School Project)</h3>
           <p class="workDescription">These are design ideas for a personal identity and brand for myself. It includes business cards, letterhead and an address label for envelopes. It was originally an assignment for a class, and all designs had to use good typography techniques.</p>
 
           <div class="moreSection">
@@ -387,44 +323,21 @@
             </ul>
 
             <h4>Iterations</h4>
-            <a href="img/personal-id/personal-id-v1.jpg" target="_blank"><img src="img/personal-id/personal-id-v1.jpg" alt="personal id v1"></a>
+            <a href="img/personal-id/personal-id-v1.jpg" target="_blank" rel="nofollow"><img src="img/personal-id/personal-id-v1.jpg" alt="personal id v1"></a>
             <p class="iterationDescription">These were some of the initial ideas I had for my personal branding.</p>
 
-            <a href="img/personal-id/personal-id-v2.jpg" target="_blank"><img src="img/personal-id/personal-id-v2.jpg" alt="personal id v2"></a>
+            <a href="img/personal-id/personal-id-v2.jpg" target="_blank" rel="nofollow"><img src="img/personal-id/personal-id-v2.jpg" alt="personal id v2"></a>
             <p class="iterationDescription">After some refining, I came up with some ideas for business cards.</p>
 
-            <a href="img/personal-id/personal-id-final1.jpg" target="_blank"><img src="img/personal-id/personal-id-final1.jpg" alt="personal id final 1"></a>
+            <a href="img/personal-id/personal-id-final1.jpg" target="_blank" rel="nofollow"><img src="img/personal-id/personal-id-final1.jpg" alt="personal id final 1"></a>
             <p class="iterationDescription">This is one of the final designs I settled on for letterhead, business cards and stationary.</p>
 
-            <a href="img/personal-id/personal-id-final2.jpg" target="_blank"><img src="img/personal-id/personal-id-final2.jpg" alt="personal id final 2"></a>
+            <a href="img/personal-id/personal-id-final2.jpg" target="_blank" rel="nofollow"><img src="img/personal-id/personal-id-final2.jpg" alt="personal id final 2"></a>
             <p class="iterationDescription">And another final design.</p>
           </div>
           
-          <p class="showMore"><a class="showMoreLink" href="#personalIdWorkBlock">Show more.</a></p>
+          <p class="showMore"><a class="showMoreLink" href="#personalIdWorkBlock" rel="nofollow">Show more.</a></p>
           <p class="showLess"><a class="showLessLink" href="#personalIdWorkBlock" rel="nofollow">Show less.</a></p>
-        </div>
-
-        <div id="dpsFolioWorkBlock" class="workBlock">
-          <img src="img/mockups/dps-mockup.jpg" alt="img 5" />
-          <h3>DPS Folio Design</h3>
-          <p class="workDescription">The purpose of this project was to create an interactive PDF for viewing on an iPad. The design could be anything of my choice, as long as it incorporated a certain amount of interactivity and had all essential information.</p>
-
-          <div class="moreSection">
-            <h4>Tools Used</h4>
-            <ul>
-              <li>InDesign</li>
-              <li>InDesign DPS Folio Tools</li>
-              <li>Photoshop</li>
-              <li>Illustrator</li>
-            </ul>
-
-            <h4>Iterations</h4>
-            <a href="img/mockups/dps-mockup.jpg" target="_blank"><img src="img/mockups/dps-mockup.jpg" alt="dps folio design"></a>
-            <p class="iterationDescription">This is a screenshot of the interactive PDF I made in InDesign using the DPS Folio tools.</p>
-          </div>
-          
-          <p class="showMore"><a class="showMoreLink" href="#dpsFolioWorkBlock">Show more.</a></p>
-          <p class="showLess"><a class="showLessLink" href="#dpsFolioWorkBlock" rel="nofollow">Show less.</a></p>
         </div>
       </section>
     </article>
@@ -432,33 +345,37 @@
     <article class="contentArticle resumeArticle" id="resume">
       <h2>R&eacute;sum&eacute;</h2>
       <div>
-        <a href="img/mikkel-resume-v3.pdf" target="_blank"><img src="img/mikkel-resume-v3.jpg" alt="This is my resume. Download link below." /></a>
+        <a href="img/mikkel-resume.pdf" target="_blank" rel="nofollow"><img src="img/mikkel-resume.jpg" alt="This is my resume. Download link below." /></a>
       </div>
-      <p><a href="img/mikkel-resume-v3.pdf" target="_blank">Click here to download.</a></p>
+      <p><a href="img/mikkel-resume.pdf" target="_blank" rel="nofollow">Click here to download.</a></p>
     </article>
     <article class="contentArticle" id="about">
       <h2>About Me</h2>
       <div class="aboutRow">
-      	<section class="aboutSection">
-	      	<h3>My Background</h3>
-	      	<p>I was born and raised in Nipomo, CA.
-	I earned my Bachelor of Science in Graphic Communication from California Polytechnic State University (San Luis Obispo) in June 2015; my concentration was in Web and Digital Media.</p>
-	      </section>
-	      <section class="aboutSection">
-	      	<h3>My Interests</h3>
-	      	<p>I enjoy coding (primarily HTML/CSS and JavaScript), playing music (trombone and bass guitar are my weapons of choice) and I also dabble as a 3D artist. You can see some of my work <a href="#work" rel="nofollow">above</a>.</p>
-	      </section>
+        <section class="aboutSection">
+          <h3>My Background</h3>
+          <p>I was born and raised in Nipomo, CA. I earned my Bachelor of Science in Graphic Communication from California Polytechnic State University (San Luis Obispo) in June 2015; my concentration was in Web and Digital Media.</p>
+        </section>
+        <section class="aboutSection">
+          <h3>My Interests</h3>
+          <p>I enjoy coding (primarily HTML/CSS and JavaScript), drinking coffee, playing video games, making video games, playing music (trombone and bass guitar are my weapons of choice), and I dabble as a 3D artist. You can see some of my work <a href="#workTarget" rel="nofollow">above</a>.</p>
+        </section>
       </div>
 
       <div class="aboutRow">
-      	<section class="aboutSection">
-	      	<h3>The Future</h3>
-	      	<p>The future is a moving target. I have a lot of passions and interests, including web development, music, 3D animation and cooking; I pursue all of these on some level, but there are some I focus on more than others. I haven’t figured out exactly which of these will be my career, but for now web development and music are my strongest leads.</p>
-	      </section>
+        <section class="aboutSection">
+          <h3>Social Media</h3>
+          <div class="socialIcons">
+            <a class="twitter" href="//www.twitter.com/mikkelhsandberg" alt="twitter" target="_blank"></a>
+            <a class="facebook" href="//www.facebook.com/mikkelhsandberg" alt="facebook" target="_blank"></a>
+            <a class="linkedin" href="//www.linkedin.com/in/mikkelsandberg/" alt="linkedin" target="_blank"></a>
+            <a class="youtube" href="//www.youtube.com/channel/UCgA5nADU1preIGCu7KpjefQ" alt="youtube" target="_blank"></a>
+          </div>
+        </section>
 
         <section class="aboutSection">
           <h3>Contact</h3>
-          <p>You can reach me at: <a href="mailto:&#109;&#105;&#107;&#107;&#101;&#108;&#064;&#115;&#097;&#110;&#100;&#098;&#101;&#114;&#103;&#046;&#110;&#101;&#116;" target="_blank">&#109;&#105;&#107;&#107;&#101;&#108;&#064;&#115;&#097;&#110;&#100;&#098;&#101;&#114;&#103;&#046;&#110;&#101;&#116;</a></p>
+          <p>You can reach me at: <a href="mailto:&#109;&#105;&#107;&#107;&#101;&#108;&#064;&#115;&#097;&#110;&#100;&#098;&#101;&#114;&#103;&#046;&#110;&#101;&#116;" target="_blank" rel="nofollow">&#109;&#105;&#107;&#107;&#101;&#108;&#064;&#115;&#097;&#110;&#100;&#098;&#101;&#114;&#103;&#046;&#110;&#101;&#116;</a></p>
         </section>
       </div>
     </article>
@@ -467,7 +384,7 @@
       <ul class="footerNav">
         <li>Site Map</li>
         <li><a href="#topAnchor" rel="nofollow">Top</a></li>
-        <li><a href="#work" rel="nofollow">My Work</a></li>
+        <li><a href="#workTarget" rel="nofollow">My Work</a></li>
         <li><a href="#resume" rel="nofollow">R&eacute;sum&eacute;</a></li>
         <li><a href="#about" rel="nofollow">About Me</a></li>
       </ul>
@@ -475,9 +392,9 @@
         <!-- automatically updates year -->
         Mikkel Sandberg &copy;
         <script type="text/javascript">
-        var today = new Date()
-        var year = today.getFullYear()
-        document.write(year)
+          let today = new Date();
+          let year = today.getFullYear();
+          document.write(year);
         </script>
         All rights reserved
       </p>
@@ -486,6 +403,19 @@
 
     <a href="#topAnchor" class="topLink" rel="nofollow">Top</a>
   </div>
+
+  <!-- javascript -->
+  <script src="js/vendor/jquery-1.11.3.min.js"></script>
+  <script src="js/vendor/jquery.typist.js"></script>
+  <script src="js/page.js"></script>
+  <!-- show page when content loads in -->
+  <script>
+    window.onload = function() {
+      $('body').removeClass('loading');
+      
+      initTypist();
+    };
+  </script>
 </body>
 
 </html>
