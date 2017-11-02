@@ -116,24 +116,24 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   src: url(../fonts/Oswald-Bold.ttf);
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
-/* line 77, ../sass/screen.sass */
+/* line 97, ../sass/screen.sass */
 html {
   font-size: 16px;
 }
 
-/* line 79, ../sass/screen.sass */
+/* line 99, ../sass/screen.sass */
 body {
   font-family: "Oswald", sans-serif;
 }
-/* line 81, ../sass/screen.sass */
+/* line 101, ../sass/screen.sass */
 body .loadingText {
   display: none;
 }
-/* line 83, ../sass/screen.sass */
+/* line 103, ../sass/screen.sass */
 body.loading {
   overflow: hidden;
 }
-/* line 85, ../sass/screen.sass */
+/* line 105, ../sass/screen.sass */
 body.loading .loadingText {
   display: block;
   z-index: 3000;
@@ -143,18 +143,18 @@ body.loading .loadingText {
   transform: translate(-50%, -50%);
   position: fixed;
 }
-/* line 90, ../sass/screen.sass */
+/* line 110, ../sass/screen.sass */
 body.loading .loadingText h6 {
   font-size: 2rem;
   color: #a85950;
   text-align: center;
 }
-/* line 94, ../sass/screen.sass */
+/* line 114, ../sass/screen.sass */
 body.loading .loadingText p {
   text-align: center;
   margin-top: 1rem;
 }
-/* line 97, ../sass/screen.sass */
+/* line 117, ../sass/screen.sass */
 body.loading:before {
   content: "";
   width: 100vw;
@@ -165,15 +165,17 @@ body.loading:before {
   z-index: 2000;
 }
 
-/* line 105, ../sass/screen.sass */
+/* line 125, ../sass/screen.sass */
 h1 {
   font-size: 3rem;
-  line-height: 3.5rem;
-  color: #195bad;
+  line-height: 1.2em;
+  color: #333;
   text-align: center;
-  background-color: rgba(200, 200, 200, 0.7);
-  padding: 5%;
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 70px;
   width: 50%;
+  min-width: 500px;
+  box-sizing: border-box;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -181,7 +183,7 @@ h1 {
   text-transform: uppercase;
 }
 
-/* line 115, ../sass/screen.sass */
+/* line 137, ../sass/screen.sass */
 h2 {
   font-size: 3rem;
   line-height: 1.2em;
@@ -190,7 +192,7 @@ h2 {
   text-transform: uppercase;
 }
 
-/* line 121, ../sass/screen.sass */
+/* line 143, ../sass/screen.sass */
 h3, h4 {
   font-size: 1.5rem;
   line-height: 1.2em;
@@ -199,7 +201,7 @@ h3, h4 {
   text-transform: uppercase;
 }
 
-/* line 129, ../sass/screen.sass */
+/* line 151, ../sass/screen.sass */
 p {
   color: #333;
   text-align: left;
@@ -207,18 +209,18 @@ p {
   line-height: 2rem;
 }
 
-/* line 134, ../sass/screen.sass */
+/* line 156, ../sass/screen.sass */
 a {
   color: #cc514a;
   text-decoration: none;
   transition: all 0.26s ease-in-out;
 }
-/* line 139, ../sass/screen.sass */
+/* line 161, ../sass/screen.sass */
 a:hover {
   color: #d77772;
 }
 
-/* line 143, ../sass/screen.sass */
+/* line 165, ../sass/screen.sass */
 .mainSplash {
   position: fixed;
   width: 100%;
@@ -228,14 +230,14 @@ a:hover {
   transform: translate(-50%, -50%);
   z-index: 1;
 }
-/* line 151, ../sass/screen.sass */
+/* line 173, ../sass/screen.sass */
 .mainSplash a {
   position: absolute;
-  bottom: 20px;
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
 }
-/* line 156, ../sass/screen.sass */
+/* line 178, ../sass/screen.sass */
 .mainSplash .heroImage:before {
   content: "";
   background-image: url(../img/mikkel-hero-image.jpg);
@@ -247,19 +249,15 @@ a:hover {
   height: 100vh;
 }
 
-/* line 165, ../sass/screen.sass */
+/* line 187, ../sass/screen.sass */
 .next-arrow {
+  font-size: 8rem;
+  color: #fff;
   position: absolute;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  color: #cc514a;
   animation: arrow-bounce 2s infinite;
-  transition: all 0.26s ease-in-out;
-}
-/* line 174, ../sass/screen.sass */
-.next-arrow:hover {
-  color: #d77772;
 }
 @keyframes arrow-bounce {
   0%, 100% {
@@ -269,7 +267,7 @@ a:hover {
     transform: translateY(-20px) translateX(-50%);
   }
 }
-/* line 184, ../sass/screen.sass */
+/* line 202, ../sass/screen.sass */
 .afterSplash {
   position: absolute;
   width: 100%;
@@ -278,7 +276,7 @@ a:hover {
   background: #fff;
 }
 
-/* line 192, ../sass/screen.sass */
+/* line 210, ../sass/screen.sass */
 .contentArticle {
   max-width: 1280px;
   margin: 0 auto;
@@ -286,12 +284,12 @@ a:hover {
   overflow: hidden;
 }
 
-/* line 199, ../sass/screen.sass */
+/* line 217, ../sass/screen.sass */
 .carouselWrapper {
   margin: 140px 0 0;
   text-align: center;
 }
-/* line 202, ../sass/screen.sass */
+/* line 220, ../sass/screen.sass */
 .carouselWrapper .imageContainer {
   width: 384px;
   height: 216px;
@@ -299,66 +297,53 @@ a:hover {
   position: relative;
   perspective: 2500px;
 }
-/* line 208, ../sass/screen.sass */
+/* line 226, ../sass/screen.sass */
 .carouselWrapper .imageContainer .carouselButton {
-  width: 100px;
-  height: 288.208px;
   position: absolute;
-  z-index: 10;
-  top: -37px;
+  top: 50%;
+  transform: translateY(-50%);
   cursor: pointer;
-  transition: all 0.26s ease-in-out;
+  z-index: 10;
 }
-/* line 216, ../sass/screen.sass */
+/* line 232, ../sass/screen.sass */
 .carouselWrapper .imageContainer .carouselButton:before {
   font-family: FontAwesome;
   font-size: 7rem;
-  color: rgba(255, 255, 255, 0.5);
+  color: #333;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  transition: all 0.26s ease-in-out;
 }
-/* line 221, ../sass/screen.sass */
+/* line 238, ../sass/screen.sass */
+.carouselWrapper .imageContainer .carouselButton:hover:before {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+/* line 240, ../sass/screen.sass */
 .carouselWrapper .imageContainer .prev {
-  left: -180px;
-  background: linear-gradient(to left, rgba(99, 99, 99, 0.15) 0%, rgba(166, 166, 166, 0) 100%);
+  left: -120px;
 }
-/* line 224, ../sass/screen.sass */
-.carouselWrapper .imageContainer .prev:hover {
-  height: 320px;
-  width: 130px;
-  left: -210px;
-  top: -53px;
-}
-/* line 229, ../sass/screen.sass */
+/* line 242, ../sass/screen.sass */
 .carouselWrapper .imageContainer .prev:before {
   content: "";
 }
-/* line 231, ../sass/screen.sass */
+/* line 244, ../sass/screen.sass */
 .carouselWrapper .imageContainer .next {
-  right: -180px;
-  background: linear-gradient(to right, rgba(99, 99, 99, 0.15) 0%, rgba(166, 166, 166, 0) 100%);
+  right: -120px;
 }
-/* line 234, ../sass/screen.sass */
-.carouselWrapper .imageContainer .next:hover {
-  height: 320px;
-  width: 130px;
-  right: -210px;
-  top: -53px;
-}
-/* line 239, ../sass/screen.sass */
+/* line 246, ../sass/screen.sass */
 .carouselWrapper .imageContainer .next:before {
   content: "";
 }
-/* line 242, ../sass/screen.sass */
+/* line 249, ../sass/screen.sass */
 .carouselWrapper .imageContainer #carousel {
   width: 100%;
   height: 100%;
   position: absolute;
   transform-style: preserve-3d;
 }
-/* line 247, ../sass/screen.sass */
+/* line 254, ../sass/screen.sass */
 .carouselWrapper .imageContainer #carousel .image {
   display: block;
   position: absolute;
@@ -374,44 +359,44 @@ a:hover {
   background-color: #fff;
   background-position: center;
 }
-/* line 261, ../sass/screen.sass */
+/* line 268, ../sass/screen.sass */
 .carouselWrapper .imageContainer #carousel .image#animWork-carouselImage {
   background-image: url(../img/mockups/anim-work-mockup.jpg);
 }
-/* line 263, ../sass/screen.sass */
+/* line 270, ../sass/screen.sass */
 .carouselWrapper .imageContainer #carousel .image#fireswing-carouselImage {
   background-image: url(../img/mockups/fireswing-final.jpg);
 }
-/* line 265, ../sass/screen.sass */
+/* line 272, ../sass/screen.sass */
 .carouselWrapper .imageContainer #carousel .image#moviePoster-carouselImage {
   background-image: url(../img/mockups/movie-poster-mockup.jpg);
 }
-/* line 267, ../sass/screen.sass */
+/* line 274, ../sass/screen.sass */
 .carouselWrapper .imageContainer #carousel .image#personalId-carouselImage {
   background-image: url(../img/mockups/personal-id-mockup.jpg);
 }
-/* line 269, ../sass/screen.sass */
+/* line 276, ../sass/screen.sass */
 .carouselWrapper .imageContainer #carousel .image#apcEntertainment-carouselImage {
   background-image: url(../img/mockups/apc-entertainment.png);
 }
-/* line 271, ../sass/screen.sass */
+/* line 278, ../sass/screen.sass */
 .carouselWrapper .imageContainer #carousel .image#friendQuest-carouselImage {
   background-image: url(../img/mockups/friend-quest.png);
 }
 
-/* line 274, ../sass/screen.sass */
+/* line 281, ../sass/screen.sass */
 .mobileWork {
   display: none;
 }
 
-/* line 277, ../sass/screen.sass */
+/* line 284, ../sass/screen.sass */
 .descriptionBlock {
   min-height: 300px;
   max-width: 514px;
   position: relative;
   margin: 0 auto;
 }
-/* line 282, ../sass/screen.sass */
+/* line 289, ../sass/screen.sass */
 .descriptionBlock:before {
   content: "";
   position: absolute;
@@ -422,13 +407,13 @@ a:hover {
   background-image: linear-gradient(to right, rgba(204, 204, 204, 0), #cccccc, #cccccc, #cccccc, rgba(204, 204, 204, 0));
 }
 
-/* line 291, ../sass/screen.sass */
+/* line 298, ../sass/screen.sass */
 .descriptionSection {
   height: 0;
   opacity: 0;
   visibility: hidden;
 }
-/* line 295, ../sass/screen.sass */
+/* line 302, ../sass/screen.sass */
 .descriptionSection.active {
   height: initial;
   visibility: visible;
@@ -437,26 +422,26 @@ a:hover {
   padding-top: 50px;
   transition: opacity 0.75s ease-in-out;
 }
-/* line 302, ../sass/screen.sass */
+/* line 309, ../sass/screen.sass */
 .descriptionSection h3, .descriptionSection h4 {
   text-align: center;
 }
-/* line 304, ../sass/screen.sass */
+/* line 311, ../sass/screen.sass */
 .descriptionSection h3 a:link, .descriptionSection h4 a:link, .descriptionSection h3 a:visited, .descriptionSection h4 a:visited {
   color: #cc514a;
   text-decoration: none;
   transition: all 0.26s ease-in-out;
 }
-/* line 308, ../sass/screen.sass */
+/* line 315, ../sass/screen.sass */
 .descriptionSection h3 a:hover, .descriptionSection h4 a:hover {
   color: #d77772;
 }
-/* line 310, ../sass/screen.sass */
+/* line 317, ../sass/screen.sass */
 .descriptionSection .showLess {
   display: none;
 }
 
-/* line 312, ../sass/screen.sass */
+/* line 319, ../sass/screen.sass */
 .moreSection {
   opacity: 0;
   visibility: hidden;
@@ -464,144 +449,146 @@ a:hover {
   margin: 0;
   transition: all 0.26s ease-in-out;
 }
-/* line 318, ../sass/screen.sass */
+/* line 325, ../sass/screen.sass */
 .moreSection h4 {
   font-size: 1.25rem;
   text-align: left;
   margin: 20px 0 10px;
 }
-/* line 323, ../sass/screen.sass */
+/* line 330, ../sass/screen.sass */
 .moreSection ul li {
   line-height: 1.25rem;
   text-indent: 10px;
 }
-/* line 326, ../sass/screen.sass */
+/* line 333, ../sass/screen.sass */
 .moreSection ul li:before {
   content: "‒";
   font-weight: 600;
   margin-right: 5px;
 }
-/* line 330, ../sass/screen.sass */
+/* line 337, ../sass/screen.sass */
 .moreSection img {
   width: 100%;
   margin: 10px 0;
   border: 1px solid #ddd;
 }
-/* line 334, ../sass/screen.sass */
+/* line 341, ../sass/screen.sass */
 .moreSection .iterationDescription {
   margin-bottom: 40px;
 }
-/* line 336, ../sass/screen.sass */
+/* line 343, ../sass/screen.sass */
 .moreSection.show {
   opacity: 1;
   visibility: visible;
   height: initial;
 }
-/* line 340, ../sass/screen.sass */
+/* line 347, ../sass/screen.sass */
 .moreSection .episodeList {
   margin: 10px 0 40px;
 }
 
-/* line 342, ../sass/screen.sass */
+/* line 349, ../sass/screen.sass */
 .friendQuestPlayer {
   margin: 20px 0 40px;
 }
 
-/* line 347, ../sass/screen.sass */
+/* line 354, ../sass/screen.sass */
 .resumeArticle div {
   text-align: center;
   width: 50%;
   margin: 50px auto 20px;
 }
-/* line 351, ../sass/screen.sass */
+/* line 358, ../sass/screen.sass */
 .resumeArticle div img {
   box-shadow: 0 0 5px 0 #bbb;
   width: 100%;
   transition: all 0.26s ease-in-out;
 }
-/* line 355, ../sass/screen.sass */
+/* line 362, ../sass/screen.sass */
 .resumeArticle div img:hover {
   box-shadow: 0 0 15px 2px #bbb;
   transform: scale(1.01);
 }
-/* line 358, ../sass/screen.sass */
+/* line 365, ../sass/screen.sass */
 .resumeArticle div img a {
   display: inline-block;
 }
-/* line 360, ../sass/screen.sass */
+/* line 367, ../sass/screen.sass */
 .resumeArticle p {
   width: 50%;
   margin: 0 auto;
 }
-/* line 364, ../sass/screen.sass */
+/* line 371, ../sass/screen.sass */
 .resumeArticle p a:hover {
   color: #d77772;
 }
 
-/* line 368, ../sass/screen.sass */
+/* line 375, ../sass/screen.sass */
 #about {
   overflow: hidden;
 }
 
-/* line 370, ../sass/screen.sass */
+/* line 377, ../sass/screen.sass */
 .aboutRow {
   overflow: hidden;
   margin-bottom: 100px;
 }
-/* line 373, ../sass/screen.sass */
+/* line 380, ../sass/screen.sass */
 .aboutRow:last-child {
   margin-bottom: 0;
 }
-/* line 375, ../sass/screen.sass */
+/* line 382, ../sass/screen.sass */
 .aboutRow .aboutSection {
   width: 50%;
   padding-right: 48px;
   box-sizing: border-box;
   float: left;
 }
-/* line 380, ../sass/screen.sass */
+/* line 387, ../sass/screen.sass */
 .aboutRow .aboutSection:last-child {
   padding-right: 0;
 }
 
-/* line 382, ../sass/screen.sass */
+/* line 389, ../sass/screen.sass */
 .socialIcons {
   display: -ms-flex;
   display: -webkit-flex;
   display: flex;
 }
-/* line 386, ../sass/screen.sass */
+/* line 391, ../sass/screen.sass */
 .socialIcons a {
+  -ms-flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
   flex: 0 0 auto;
 }
-/* line 388, ../sass/screen.sass */
+/* line 393, ../sass/screen.sass */
 .socialIcons a:not(:first-of-type) {
   margin-left: 15px;
 }
-/* line 390, ../sass/screen.sass */
+/* line 395, ../sass/screen.sass */
 .socialIcons a:before {
   content: "";
   background-image: url(../img/social-icons-sprite.png);
   background-size: cover;
   background-repeat: no-repeat;
   display: block;
-  width: 32px;
-  height: 32px;
+  width: 50px;
+  height: 50px;
 }
-/* line 398, ../sass/screen.sass */
+/* line 403, ../sass/screen.sass */
 .socialIcons a.linkedin:before {
-  background-position: 0 -37px;
+  background-position: 0 -58px;
 }
-/* line 400, ../sass/screen.sass */
+/* line 405, ../sass/screen.sass */
 .socialIcons a.twitter:before {
-  background-position: 0 -74px;
+  background-position: 0 -116px;
 }
-/* line 402, ../sass/screen.sass */
+/* line 407, ../sass/screen.sass */
 .socialIcons a.youtube:before {
-  background-position: 0 -110px;
+  background-position: 0 -171px;
 }
 
-/* line 406, ../sass/screen.sass */
+/* line 411, ../sass/screen.sass */
 .topLink {
   display: none;
   position: fixed;
@@ -610,13 +597,13 @@ a:hover {
   z-index: 1000;
   transition: none;
 }
-/* line 413, ../sass/screen.sass */
+/* line 418, ../sass/screen.sass */
 .topLink:link, .topLink:visited {
   color: #333;
   font-size: 2rem;
   font-weight: 100;
 }
-/* line 418, ../sass/screen.sass */
+/* line 423, ../sass/screen.sass */
 .topLink:before {
   display: block;
   content: "";
@@ -624,136 +611,128 @@ a:hover {
   font-size: 2.5rem;
   text-align: center;
 }
-/* line 425, ../sass/screen.sass */
+/* line 430, ../sass/screen.sass */
 .topLink.show {
   display: block !important;
 }
-/* line 427, ../sass/screen.sass */
+/* line 432, ../sass/screen.sass */
 .topLink.notFixed {
   position: absolute;
   bottom: 180px;
 }
 
-/* line 432, ../sass/screen.sass */
+/* line 437, ../sass/screen.sass */
 footer {
   background-color: #ccc;
-  overflow: hidden;
   padding: 20px 48px;
 }
-
-/* line 436, ../sass/screen.sass */
-.footerNav {
-  float: left;
-  width: 50%;
+/* line 440, ../sass/screen.sass */
+footer .footerInner {
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+  -ms-align-items: center;
+  -webkit-align-items: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1280px;
 }
-/* line 439, ../sass/screen.sass */
+/* line 445, ../sass/screen.sass */
+footer .footerInner > * {
+  -ms-flex: 1 0 50%;
+  -webkit-flex: 1 0 50%;
+  flex: 1 0 50%;
+}
+
+/* line 448, ../sass/screen.sass */
 .footerNav li + * {
   padding-top: 10px;
 }
 
-/* line 441, ../sass/screen.sass */
+/* line 450, ../sass/screen.sass */
 .copyright {
-  float: right;
-  width: 50%;
   font-size: 1rem;
-  line-height: 120px;
   text-align: right;
 }
 
 @media only screen and (max-width: 1024px) {
-  /* line 452, ../sass/screen.sass */
+  /* line 458, ../sass/screen.sass */
   .resumeArticle div {
     width: 75%;
   }
-  /* line 455, ../sass/screen.sass */
+  /* line 461, ../sass/screen.sass */
   .resumeArticle div img:hover {
     box-shadow: 0 0 5px 0 #bbb;
     transform: none;
   }
-  /* line 458, ../sass/screen.sass */
+  /* line 464, ../sass/screen.sass */
   .resumeArticle p {
     width: 75%;
   }
 }
 @media only screen and (max-width: 768px) {
-  /* line 463, ../sass/screen.sass */
+  /* line 469, ../sass/screen.sass */
+  h1 {
+    font-size: 2rem;
+    padding: 50px;
+    width: 80%;
+    min-width: 0;
+  }
+
+  /* line 475, ../sass/screen.sass */
   h2 {
     margin-bottom: 48px;
   }
 
-  /* line 466, ../sass/screen.sass */
-  .mobileNavUl {
-    position: absolute;
-    display: flex;
-    z-index: 1000;
-    top: 0;
-    right: 0;
-    width: 100%;
-    min-width: 320px;
-    box-shadow: 0px 0px 3px #ccc;
-  }
-  /* line 475, ../sass/screen.sass */
-  .mobileNavUl li {
-    flex: 1;
-    text-align: center;
-    box-sizing: border-box;
-  }
-  /* line 479, ../sass/screen.sass */
-  .mobileNavUl li + * {
-    border-left: 1px solid #999;
-  }
-  /* line 482, ../sass/screen.sass */
-  .mobileNavUl li a:link, .mobileNavUl li a:visited {
-    display: block;
-    padding: 16px 0;
-    background-color: #ccc;
-    text-transform: uppercase;
+  /* line 478, ../sass/screen.sass */
+  .next-arrow {
+    font-size: 5rem;
   }
 
-  /* line 487, ../sass/screen.sass */
+  /* line 481, ../sass/screen.sass */
   .desktopWork {
     display: none;
   }
 
-  /* line 489, ../sass/screen.sass */
+  /* line 483, ../sass/screen.sass */
   .mobileWork {
     display: block;
   }
 
-  /* line 491, ../sass/screen.sass */
+  /* line 485, ../sass/screen.sass */
   .workBlock {
     margin: -48px 0 48px;
     padding-top: 48px;
   }
-  /* line 494, ../sass/screen.sass */
+  /* line 488, ../sass/screen.sass */
   .workBlock img {
     width: 100%;
     margin-bottom: 20px;
   }
-  /* line 497, ../sass/screen.sass */
+  /* line 491, ../sass/screen.sass */
   .workBlock .showLess {
     display: none;
   }
 
-  /* line 500, ../sass/screen.sass */
+  /* line 494, ../sass/screen.sass */
   .contentArticle {
     padding: 48px 48px 0;
   }
 
-  /* line 503, ../sass/screen.sass */
+  /* line 497, ../sass/screen.sass */
   .resumeArticle div {
     width: 100%;
   }
-  /* line 505, ../sass/screen.sass */
+  /* line 499, ../sass/screen.sass */
   .resumeArticle p {
     width: 100%;
   }
 
-  /* line 507, ../sass/screen.sass */
+  /* line 501, ../sass/screen.sass */
   .aboutRow {
     margin: 0;
   }
-  /* line 509, ../sass/screen.sass */
+  /* line 503, ../sass/screen.sass */
   .aboutRow .aboutSection {
     float: none;
     width: 100%;
@@ -761,18 +740,63 @@ footer {
     margin-bottom: 80px;
   }
 
+  /* line 509, ../sass/screen.sass */
+  footer .footerInner {
+    display: -ms-flex;
+    display: -webkit-flex;
+    display: flex;
+    -ms-align-items: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-justify-content: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+  }
   /* line 514, ../sass/screen.sass */
-  .copyright {
-    clear: both;
-    float: none;
-    width: 100%;
-    text-align: center;
-    line-height: initial;
-    padding-top: 20px;
+  footer .footerInner > * {
+    -ms-flex: 1 0 100%;
+    -webkit-flex: 1 0 100%;
+    flex: 1 0 100%;
   }
 
-  /* line 522, ../sass/screen.sass */
+  /* line 516, ../sass/screen.sass */
+  .footerNav {
+    display: -ms-flex;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  /* line 519, ../sass/screen.sass */
+  .footerNav li {
+    -ms-flex: 1 0 auto;
+    -webkit-flex: 1 0 auto;
+    flex: 1 0 auto;
+    text-align: center;
+    padding-top: 20px;
+  }
+  /* line 523, ../sass/screen.sass */
+  .footerNav li:first-of-type {
+    -ms-flex: 0 0 100%;
+    -webkit-flex: 0 0 100%;
+    flex: 0 0 100%;
+    padding-top: 0;
+  }
+
+  /* line 526, ../sass/screen.sass */
+  .copyright {
+    line-height: 1.5;
+    text-align: center;
+    padding-top: 20px;
+    max-width: 170px;
+  }
+
+  /* line 532, ../sass/screen.sass */
   .topLink.notFixed {
-    bottom: 220px;
+    bottom: 180px;
   }
 }

@@ -72,6 +72,26 @@ $bodyTextColor: #333
   top: 50%
   left: 50%
   transform: translate(-50%, -50%)
+=displayFlex
+  display: -ms-flex
+  display: -webkit-flex
+  display: flex
+=flexAlignItems($alignment)
+  -ms-align-items: $alignment
+  -webkit-align-items: $alignment
+  align-items: $alignment
+=flexWrap($wrapBehavior)
+  -ms-flex-wrap: $wrapBehavior
+  -webkit-flex-wrap: $wrapBehavior
+  flex-wrap: $wrapBehavior
+=flexJustifyContent($alignment)
+  -ms-justify-content: $alignment
+  -webkit-justify-content: $alignment
+  justify-content: $alignment
+=flexShorthand($flex-grow, $flex-shrink, $flex-basis)
+  -ms-flex: $flex-grow $flex-shrink $flex-basis
+  -webkit-flex: $flex-grow $flex-shrink $flex-basis
+  flex: $flex-grow $flex-shrink $flex-basis
 
 // text styles
 html
@@ -104,12 +124,14 @@ body
       z-index: 2000
 h1
   font-size: 3rem
-  line-height: 3.5rem
-  color: $h1Color
+  line-height: 1.2em
+  color: $bodyTextColor
   text-align: center
-  background-color: rgba(200,200,200,0.7)
-  padding: 5%
+  background-color: rgba(255,255,255,0.4)
+  padding: 70px
   width: 50%
+  min-width: 500px
+  box-sizing: border-box
   +vertAndHorizCenter
   +headingText
 h2
@@ -150,7 +172,7 @@ a
   z-index: 1
   a
     position: absolute
-    bottom: 20px
+    bottom: 0
     left: 50%
     transform: translateX(-50%)
   .heroImage:before
@@ -163,22 +185,18 @@ a
     width: 100vw
     height: 100vh
 .next-arrow
+  font-size: 8rem
+  color: #fff
   position: absolute
   bottom: 0
   left: 50%
   transform: translateX(-50%)
-  color: $linkColor
   animation: arrow-bounce 2s infinite
-
-  +transition
-  &:hover
-    color: lighten($linkColor, 10)
-
-    @keyframes arrow-bounce
-      0%, 100%
-        transform: translateY(0) translateX(-50%)
-      50%
-        transform: translateY(-20px) translateX(-50%)
+  @keyframes arrow-bounce
+    0%, 100%
+      transform: translateY(0) translateX(-50%)
+    50%
+      transform: translateY(-20px) translateX(-50%)
     
 // after splash sections
 .afterSplash
@@ -206,36 +224,25 @@ a
     position: relative
     perspective: 2500px
     .carouselButton
-      width: 100px
-      height: 288.208px
       position: absolute
-      z-index: 10
-      top: -37px
+      top: 50%
+      transform: translateY(-50%)
       cursor: pointer
-      +transition
+      z-index: 10
       &:before          
         font-family: FontAwesome
         font-size: 7rem
-        color: rgba(255, 255, 255, .5)
+        color: $bodyTextColor
         +vertAndHorizCenter
+        +transition
+      &:hover:before
+        transform: translate(-50%, -50%) scale(1.1)
     .prev
-      left: -180px
-      background: linear-gradient(to left, rgba(99,99,99,0.15) 0%, rgba(166,166,166,0) 100%)
-      &:hover
-        height: 320px
-        width: 130px
-        left: -210px
-        top: -53px
+      left: -120px
       &:before
         content: "\f104"
     .next
-      right: -180px
-      background: linear-gradient(to right, rgba(99,99,99,0.15) 0%, rgba(166,166,166,0) 100%)
-      &:hover
-        height: 320px
-        width: 130px
-        right: -210px
-        top: -53px
+      right: -120px
       &:before
         content: "\f105"
 
@@ -380,11 +387,9 @@ a
     &:last-child
       padding-right: 0
 .socialIcons
-  display: -ms-flex
-  display: -webkit-flex
-  display: flex
+  +displayFlex
   a
-    flex: 0 0 auto
+    +flexShorthand(0, 0, auto)
     &:not(:first-of-type)
       margin-left: 15px
     &:before
@@ -393,14 +398,14 @@ a
       background-size: cover
       background-repeat: no-repeat
       display: block
-      width: 32px
-      height: 32px
+      width: 50px
+      height: 50px
     &.linkedin:before
-      background-position: 0 -37px
+      background-position: 0 -58px
     &.twitter:before
-      background-position: 0 -74px
+      background-position: 0 -116px
     &.youtube:before
-      background-position: 0 -110px
+      background-position: 0 -171px
 
 // link to top
 .topLink
@@ -431,18 +436,19 @@ a
 //footer
 footer
   background-color: $navBackgroundColor
-  overflow: hidden
   padding: 20px 48px
+  .footerInner
+    +displayFlex
+    +flexAlignItems(center)
+    margin: 0 auto
+    max-width: 1280px
+    > *
+      +flexShorthand(1, 0, 50%)
 .footerNav
-  float: left
-  width: 50%
   li + *
     padding-top: 10px
 .copyright
-  float: right
-  width: 50%
   font-size: 1rem
-  line-height: 120px
   text-align: right
   
 
@@ -460,30 +466,18 @@ footer
 
 
 @media only screen and (max-width: 768px)
+  h1
+    font-size: 2rem
+    padding: 50px
+    width: 80%
+    min-width: 0
+
   h2
     margin-bottom: 48px
 
-  .mobileNavUl
-    position: absolute
-    display: flex
-    z-index: 1000
-    top: 0
-    right: 0
-    width: 100%
-    min-width: 320px
-    box-shadow: 0px 0px 3px $navBackgroundColor
-    li
-      flex: 1
-      text-align: center
-      box-sizing: border-box
-      + *
-        border-left: 1px solid #999
-      a
-        &:link, &:visited
-          display: block
-          padding: 16px 0
-          background-color: $navBackgroundColor
-          text-transform: uppercase
+  .next-arrow
+    font-size: 5rem
+
   .desktopWork
     display: none
   .mobileWork
@@ -511,13 +505,29 @@ footer
       width: 100%
       padding: 0
       margin-bottom: 80px
+  footer
+    .footerInner
+      +displayFlex
+      +flexAlignItems(center)
+      +flexWrap(wrap)
+      +flexJustifyContent(center)
+      > *
+        +flexShorthand(1, 0, 100%)
+  .footerNav
+    +displayFlex
+    +flexWrap(wrap)
+    li
+      +flexShorthand(1, 0, auto)
+      text-align: center
+      padding-top: 20px
+      &:first-of-type
+        +flexShorthand(0, 0, 100%)
+        padding-top: 0
   .copyright
-    clear: both
-    float: none
-    width: 100%
+    line-height: 1.5
     text-align: center
-    line-height: initial
     padding-top: 20px
+    max-width: 170px
   .topLink
     &.notFixed
-      bottom: 220px
+      bottom: 180px
