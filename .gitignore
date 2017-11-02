@@ -1,1 +1,4 @@
 .sass-cache/
+config.rb
+stylesheets/ie.css
+stylesheets/print.css
