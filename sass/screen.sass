@@ -129,8 +129,7 @@ h1
   text-align: center
   background-color: rgba(255,255,255,0.4)
   padding: 70px
-  width: 50%
-  min-width: 500px
+  width: 650px
   box-sizing: border-box
   +vertAndHorizCenter
   +headingText
@@ -349,7 +348,7 @@ a
 .resumeArticle
   div
     text-align: center
-    width: 50%
+    max-width: 8.5in
     margin: 50px auto 20px
     img
       box-shadow: 0 0 5px 0 #bbb
@@ -361,7 +360,7 @@ a
       a
         display: inline-block
   p
-    width: 50%
+    max-width: 8.5in
     margin: 0 auto
     a
       &:hover
@@ -446,27 +445,22 @@ footer
 .copyright
   font-size: 1rem
   text-align: right
-  
 
 // media queries
 @media only screen and (max-width: 1024px)
   .resumeArticle
     div
-      width: 75%
       img
         &:hover
           box-shadow: 0 0 5px 0 #bbb
           transform: none
-    p
-      width: 75%
 
-
-@media only screen and (max-width: 768px)
+@media only screen and (max-width: 767px)
   h1
     font-size: 2rem
     padding: 50px
-    width: 80%
-    min-width: 0
+    width: 100%
+    max-width: 450px
 
   h2
     margin-bottom: 48px
