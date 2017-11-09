@@ -1,0 +1,26 @@
+{
+  "name": "mikkel-sandberg-home",
+  "version": "1.0.0",
+  "description": "Portfolio site for Mikkel Sandberg.",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-minify": "^0.2.0",
+    "babel-preset-env": "^1.6.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "minifyandbuild": "minify src -d min && babel min -d js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MikkelSandbag/Mikkel-Sandberg-Home.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MikkelSandbag/Mikkel-Sandberg-Home/issues"
+  },
+  "homepage": "https://github.com/MikkelSandbag/Mikkel-Sandberg-Home#readme"
+}
