@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name=viewport content="width=device-width, initial-scale=1">
-  <title>Mikkel Sandberg | Web Development, Podcast Production, 3D Animation, Design | Based in California</title>
-  <meta name="description" content="This is Mikkel Sandberg's website. He is a web developer, podcast producer, and designer. This is his portofolio, resume, and contact info.">
+  <title>Mikkel Sandberg | Web Dev, Design, Podcasting | From CA</title>
+  <meta name="description" content="This is Mikkel Sandberg's website. He is a web developer, designer, and podcast producer. This is his portofolio, resume, and contact info.">
   <!-- link favicon -->
   <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
@@ -30,6 +30,8 @@
   <meta name="twitter:title" content="Mikkel Sandberg | Web Development, Podcast Production, etc.">
   <meta name="twitter:description" content="This is Mikkel Sandberg's website. He is a web developer, podcast producer, and designer. This is his portofolio, resume, and contact info.">
   <meta name="twitter:image" content="http://mikkelsandberg.com/img/social-media-card-twitter.png">
+  <!-- Helps prevent duplicate content issues -->
+  <link rel="canonical" href="http://mikkelsandberg.com">
   <!-- font awesome -->
   <link rel="stylesheet" href="stylesheets/font-awesome.min.css" />
   <!-- main styles -->
@@ -62,9 +64,9 @@
           <div class="next carouselButton"></div>
           <div id="carousel">
             <div id="apcEntertainment-carouselImage" class="image"></div>
+            <div id="friendQuest-carouselImage" class="image"></div>
             <div id="animWork-carouselImage" class="image"></div>
             <div id="moviePoster-carouselImage" class="image"></div>
-            <div id="friendQuest-carouselImage" class="image"></div>
           </div>
         </section>
       </div>
@@ -72,7 +74,7 @@
       <article class="descriptionBlock">
         <section id="apcEntertainmentDescriptionSection" class="descriptionSection active">
           <h3>APC Entertainment (Freelance)</h3>
-          <p class="workDescription">This was a website that I designed and coded for an acquaintance. The client was a DJ and needed a site that would showcase the services he provided, allow potential customers to get a price quote through an interactive "quote calculator," provide a way for users to book an event, display a media library, and have a contact form for general inquiries. You can check out the live site <a href="http://apcentertainment.net" target="_blank">here</a>.</p>
+          <p class="workDescription">This was a website that I designed and coded for an acquaintance. The client was a DJ and needed a site that would showcase the services he provided, allow potential customers to get a price quote through an interactive "quote calculator," provide a way for users to book an event, display a media library, and have a contact form for general inquiries. You can check out the live site <a href="http://apcentertainment.net" target="_blank" rel="noopener">here</a>.</p>
 
           <div class="moreSection">
             <h4>Tools Used</h4>
@@ -83,7 +85,7 @@
             </ul>
 
             <h4>Mockup Design</h4>
-            <a href="img/apc-entertainment/apc-entertainment-mockup.jpg" target="_blank" rel="nofollow"><img src="img/apc-entertainment/apc-entertainment-mockup.jpg" alt="apc entertainment design"></a>
+            <a href="img/apc-entertainment/apc-entertainment-mockup.jpg" target="_blank" rel="noopener nofollow"><img src="img/apc-entertainment/apc-entertainment-mockup.jpg" alt="apc entertainment design"></a>
             <p class="iterationDescription">This is the mockup that I made for the client for this project.</p>
           </div>
           
@@ -91,9 +93,28 @@
           <p class="showLess"><a class="showLessLink" href="#work" rel="nofollow">Show less.</a></p>
         </section>
 
+        <section id="friendQuestDescriptionSection" class="descriptionSection">
+          <h3>Friend Quest (Podcast)</h3>
+          <p class="workDescription">Friend Quest is a podcast that I do with my friends where we play tabletop role playing games. We each record our audio separately and then I edit all of the tracks in Audition to get the final cut. Then, I add the intro and outro music, record voiceovers for the intro and outro, and add some basic EQ and noise filtering. Finally, I export the final audio and bring it into Premier to create a video version of the episode as well. The cover artwork was done by <a href="http://www.peterfreeby.com/" target="_blank" rel="noopener">Peter Freeby</a>.</p>
+
+          <div class="moreSection">
+            <h4>Tools Used</h4>
+            <ul>
+              <li>Audition</li>
+              <li>Premier</li>
+            </ul>
+
+            <h4>Episodes</h4>
+            <iframe id="multi_iframe" class="friendQuestPlayer" frameborder="0" scrolling="no" allowfullscreen="" src="https://www.podbean.com/media/player/multi?playlist=http%3A%2F%2Fplaylist.podbean.com%2F1730596%2Fplaylist_multi.xml&vjs=1&kdsowie31j4k1jlf913=8f584dfca005a2747835a5a5d02cab7dd7b51145&size=315&share=1&fonts=Helvetica&auto=0&download=0&rtl=0&skin=11" width="100%" height="505"></iframe>
+          </div>
+
+          <p class="showMore"><a class="showMoreLink" href="#friendQuestDescriptionSection" rel="nofollow">Show more.</a></p>
+          <p class="showLess"><a class="showLessLink" href="#work" rel="nofollow">Show less.</a></p>
+        </section>
+
         <section id="3dDescriptionSection" class="descriptionSection">
           <h3>3D Work (Professional and Personal Projects)</h3>
-          <p class="workDescription">You can find my current 3D animation demo reel on <a href="//vimeo.com/95346384" target="_blank">Vimeo</a>. Most of these are personal projects to practice and develop my skills, ranging from fluid simulations to create fire effects, to original character concepts. FireSwing Studios was a start up that I worked at for a couple summers. I created a 3D rendered splash screen for the app that we were working on. Although this splash screen was never implemented, it is still one of my favorite things that I have made.</p>
+          <p class="workDescription">You can find my current 3D animation demo reel on <a href="//vimeo.com/95346384" target="_blank" rel="noopener">Vimeo</a>. Most of these are personal projects to practice and develop my skills, ranging from fluid simulations to create fire effects, to original character concepts. FireSwing Studios was a start up that I worked at for a couple summers. I created a 3D rendered splash screen for the app that we were working on. Although this splash screen was never implemented, it is still one of my favorite things that I have made.</p>
 
           <div class="moreSection">
             <h4>Tools Used</h4>
@@ -103,27 +124,27 @@
             </ul>
 
             <h4>Cyber Spartan (Personal Project)</h4>
-            <a href="img/3d-work/spartan-v1-render.jpg" target="_blank" rel="nofollow"><img src="img/3d-work/spartan-v1-render.jpg" alt="spartan v1 render"></a>
-            <a href="img/3d-work/spartan-v2-render.jpg" target="_blank" rel="nofollow"><img src="img/3d-work/spartan-v2-render.jpg" alt="spartan v2 render"></a>
-            <a href="img/3d-work/spartan-v3-render.jpg" target="_blank" rel="nofollow"><img src="img/3d-work/spartan-v3-render.jpg" alt="spartan v3 render"></a>
-            <a href="img/3d-work/spartan-v4-render.jpg" target="_blank" rel="nofollow"><img src="img/3d-work/spartan-v4-render.jpg" alt="spartan v4 render"></a>
+            <a href="img/3d-work/spartan-v1-render.jpg" target="_blank" rel="noopener nofollow"><img src="img/3d-work/spartan-v1-render.jpg" alt="spartan v1 render"></a>
+            <a href="img/3d-work/spartan-v2-render.jpg" target="_blank" rel="noopener nofollow"><img src="img/3d-work/spartan-v2-render.jpg" alt="spartan v2 render"></a>
+            <a href="img/3d-work/spartan-v3-render.jpg" target="_blank" rel="noopener nofollow"><img src="img/3d-work/spartan-v3-render.jpg" alt="spartan v3 render"></a>
+            <a href="img/3d-work/spartan-v4-render.jpg" target="_blank" rel="noopener nofollow"><img src="img/3d-work/spartan-v4-render.jpg" alt="spartan v4 render"></a>
             <p class="iterationDescription">These are some variations of a "cyber spartan" character that I created.</p>
 
             <h4>FireSwing Studios (Splash Screen)</h4>
-            <a href="img/fireswing-splash/fireswing-v1.jpg" target="_blank" rel="nofollow"><img src="img/fireswing-splash/fireswing-v1.jpg" alt="fireswing v1"></a>
+            <a href="img/fireswing-splash/fireswing-v1.jpg" target="_blank" rel="noopener nofollow"><img src="img/fireswing-splash/fireswing-v1.jpg" alt="fireswing v1"></a>
             <p class="iterationDescription">This is the first version of the splash screen. I was still experimenting with the fluid dynamics to get the right look for the flame.</p>
 
-            <a href="img/fireswing-splash/fireswing-v2.jpg" target="_blank" rel="nofollow"><img src="img/fireswing-splash/fireswing-v2.jpg" alt="fireswing v2"></a>
+            <a href="img/fireswing-splash/fireswing-v2.jpg" target="_blank" rel="noopener nofollow"><img src="img/fireswing-splash/fireswing-v2.jpg" alt="fireswing v2"></a>
             <p class="iterationDescription">At this point, I had fine-tuned the fluid effects to get the desired look for the flames.</p>
 
-            <a href="img/fireswing-splash/fireswing-v3.jpg" target="_blank" rel="nofollow"><img src="img/fireswing-splash/fireswing-v3.jpg" alt="fireswing v3"></a>
+            <a href="img/fireswing-splash/fireswing-v3.jpg" target="_blank" rel="noopener nofollow"><img src="img/fireswing-splash/fireswing-v3.jpg" alt="fireswing v3"></a>
             <p class="iterationDescription">We wanted to try a lighter colored background.</p>
 
-            <a href="img/fireswing-splash/fireswing-v4.jpg" target="_blank" rel="nofollow"><img src="img/fireswing-splash/fireswing-v4.jpg" alt="fireswing v4"></a>
+            <a href="img/fireswing-splash/fireswing-v4.jpg" target="_blank" rel="noopener nofollow"><img src="img/fireswing-splash/fireswing-v4.jpg" alt="fireswing v4"></a>
             <p class="iterationDescription">It was requested to have a glass-breaking effect, just to see how it would look.</p>
 
-            <a href="img/fireswing-splash/fireswing-final.jpg" target="_blank" rel="nofollow"><img src="img/fireswing-splash/fireswing-final.jpg" alt="fireswing final"></a>
-            <p class="iterationDescription">This is a screenshot of the final render. You can see the full animation in my demo reel on <a href="//vimeo.com/95346384" target="_blank">Vimeo</a>.</p>
+            <a href="img/fireswing-splash/fireswing-final.jpg" target="_blank" rel="noopener nofollow"><img src="img/fireswing-splash/fireswing-final.jpg" alt="fireswing final"></a>
+            <p class="iterationDescription">This is a screenshot of the final render. You can see the full animation in my demo reel on <a href="//vimeo.com/95346384" target="_blank" rel="noopener">Vimeo</a>.</p>
           </div>
           
           <p class="showMore"><a class="showMoreLink" href="#3dDescriptionSection" rel="nofollow">Show more.</a></p>
@@ -143,36 +164,17 @@
             </ul>
 
             <h4>Iterations</h4>
-            <a href="img/movie-poster/msandberg-218-movie-poster-v1.jpg" target="_blank" rel="nofollow"><img src="img/movie-poster/msandberg-218-movie-poster-v1.jpg" alt="msandberg 218 movie poster v1"></a>
+            <a href="img/movie-poster/msandberg-218-movie-poster-v1.jpg" target="_blank" rel="noopener nofollow"><img src="img/movie-poster/msandberg-218-movie-poster-v1.jpg" alt="msandberg 218 movie poster v1"></a>
             <p class="iterationDescription">This was my first pass at this poster.</p>
 
-            <a href="img/movie-poster/msandberg-218-movie-poster-v2.jpg" target="_blank" rel="nofollow"><img src="img/movie-poster/msandberg-218-movie-poster-v2.jpg" alt="msandberg 218 movie poster v2"></a>
+            <a href="img/movie-poster/msandberg-218-movie-poster-v2.jpg" target="_blank" rel="noopener nofollow"><img src="img/movie-poster/msandberg-218-movie-poster-v2.jpg" alt="msandberg 218 movie poster v2"></a>
             <p class="iterationDescription">Playing with alignment, spacing and overall size of the elements.</p>
 
-            <a href="img/movie-poster/msandberg-218-movie-poster-final.jpg" target="_blank" rel="nofollow"><img src="img/movie-poster/msandberg-218-movie-poster-final.jpg" alt="msandberg 218 movie poster final"></a>
+            <a href="img/movie-poster/msandberg-218-movie-poster-final.jpg" target="_blank" rel="noopener nofollow"><img src="img/movie-poster/msandberg-218-movie-poster-final.jpg" alt="msandberg 218 movie poster final"></a>
             <p class="iterationDescription">This was the final product, complete with blood-spatter graphic.</p>
           </div>
           
           <p class="showMore"><a class="showMoreLink" href="#moviePosterDescriptionSection" rel="nofollow">Show more.</a></p>
-          <p class="showLess"><a class="showLessLink" href="#work" rel="nofollow">Show less.</a></p>
-        </section>
-
-        <section id="friendQuestDescriptionSection" class="descriptionSection">
-          <h3>Friend Quest (Podcast)</h3>
-          <p class="workDescription">Friend Quest is a podcast that I do with my friends where we play tabletop role playing games. We each record our audio separately and then I edit all of the tracks in Audition to get the final cut. Then, I add the intro and outro music, record voiceovers for the intro and outro, and add some basic EQ and noise filtering. Finally, I export the final audio and bring it into Premier to create a video version of the episode as well. The cover artwork was done by <a href="http://www.peterfreeby.com/" target="_blank">Peter Freeby</a>.</p>
-
-          <div class="moreSection">
-            <h4>Tools Used</h4>
-            <ul>
-              <li>Audition</li>
-              <li>Premier</li>
-            </ul>
-
-            <h4>Episodes</h4>
-            <iframe id="multi_iframe" class="friendQuestPlayer" frameborder="0" scrolling="no" allowfullscreen="" src="https://www.podbean.com/media/player/multi?playlist=http%3A%2F%2Fplaylist.podbean.com%2F1730596%2Fplaylist_multi.xml&vjs=1&kdsowie31j4k1jlf913=8f584dfca005a2747835a5a5d02cab7dd7b51145&size=315&share=1&fonts=Helvetica&auto=0&download=0&rtl=0&skin=11" width="100%" height="505"></iframe>
-          </div>
-
-          <p class="showMore"><a class="showMoreLink" href="#friendQuestDescriptionSection" rel="nofollow">Show more.</a></p>
           <p class="showLess"><a class="showLessLink" href="#work" rel="nofollow">Show less.</a></p>
         </section>
       </article>
@@ -185,7 +187,7 @@
         <div id="apcEntertainmentBlock" class="workBlock">
           <img src="img/mockups/apc-entertainment.png" alt="apc entertainment mockup" />
           <h3>APC Entertainment (Freelance)</h3>
-          <p class="workDescription">This was a website that I designed and coded for an acquaintance. The client was a DJ and needed a site that would showcase the services he provided, allow potential customers to get a price quote through an interactive "quote calculator," provide a way for users to book an event, display a media library, and have a contact form for general inquiries. You can check out the live site <a href="http://apcentertainment.net" target="_blank">here</a>.</p>
+          <p class="workDescription">This was a website that I designed and coded for an acquaintance. The client was a DJ and needed a site that would showcase the services he provided, allow potential customers to get a price quote through an interactive "quote calculator," provide a way for users to book an event, display a media library, and have a contact form for general inquiries. You can check out the live site <a href="http://apcentertainment.net" target="_blank" rel="noopener">here</a>.</p>
 
           <div class="moreSection">
             <h4>Tools Used</h4>
@@ -196,7 +198,7 @@
             </ul>
 
             <h4>Mockup Design</h4>
-            <a href="img/apc-entertainment/apc-entertainment-mockup.jpg" target="_blank" rel="nofollow"><img src="img/apc-entertainment/apc-entertainment-mockup.jpg" alt="apc entertainment design"></a>
+            <a href="img/apc-entertainment/apc-entertainment-mockup.jpg" target="_blank" rel="noopener nofollow"><img src="img/apc-entertainment/apc-entertainment-mockup.jpg" alt="apc entertainment design"></a>
             <p class="iterationDescription">This is the mockup that I made for the client for this project.</p>
           </div>
           
@@ -207,7 +209,7 @@
         <div id="friendQuestBlock" class="workBlock">
           <img src="img/mockups/friend-quest.png" alt="friend quest mockup" />
           <h3>Friend Quest (Podcast)</h3>
-          <p class="workDescription">Friend Quest is a podcast that I do with my friends where we play tabletop role playing games. We each record our audio separately and then I edit all of the tracks in Audition to get the final cut. Then, I add the intro and outro music, record voiceovers for the intro and outro, and add some basic EQ and noise filtering. Finally, I export the final audio and bring it into Premier to create a video version of the episode as well. The cover artwork was done by <a href="http://www.peterfreeby.com/" target="_blank">Peter Freeby</a>.</p>
+          <p class="workDescription">Friend Quest is a podcast that I do with my friends where we play tabletop role playing games. We each record our audio separately and then I edit all of the tracks in Audition to get the final cut. Then, I add the intro and outro music, record voiceovers for the intro and outro, and add some basic EQ and noise filtering. Finally, I export the final audio and bring it into Premier to create a video version of the episode as well. The cover artwork was done by <a href="http://www.peterfreeby.com/" target="_blank" rel="noopener">Peter Freeby</a>.</p>
 
           <div class="moreSection">
             <h4>Tools Used</h4>
@@ -237,27 +239,27 @@
             </ul>
 
             <h4>Cyber Spartan (Personal Project)</h4>
-            <a href="img/3d-work/spartan-v1-render.jpg" target="_blank" rel="nofollow"><img src="img/3d-work/spartan-v1-render.jpg" alt="spartan v1 render"></a>
-            <a href="img/3d-work/spartan-v2-render.jpg" target="_blank" rel="nofollow"><img src="img/3d-work/spartan-v2-render.jpg" alt="spartan v2 render"></a>
-            <a href="img/3d-work/spartan-v3-render.jpg" target="_blank" rel="nofollow"><img src="img/3d-work/spartan-v3-render.jpg" alt="spartan v3 render"></a>
-            <a href="img/3d-work/spartan-v4-render.jpg" target="_blank" rel="nofollow"><img src="img/3d-work/spartan-v4-render.jpg" alt="spartan v4 render"></a>
+            <a href="img/3d-work/spartan-v1-render.jpg" target="_blank" rel="noopener nofollow"><img src="img/3d-work/spartan-v1-render.jpg" alt="spartan v1 render"></a>
+            <a href="img/3d-work/spartan-v2-render.jpg" target="_blank" rel="noopener nofollow"><img src="img/3d-work/spartan-v2-render.jpg" alt="spartan v2 render"></a>
+            <a href="img/3d-work/spartan-v3-render.jpg" target="_blank" rel="noopener nofollow"><img src="img/3d-work/spartan-v3-render.jpg" alt="spartan v3 render"></a>
+            <a href="img/3d-work/spartan-v4-render.jpg" target="_blank" rel="noopener nofollow"><img src="img/3d-work/spartan-v4-render.jpg" alt="spartan v4 render"></a>
             <p class="iterationDescription">These are some variations of a "cyber spartan" character that I created.</p>
 
             <h4>FireSwing Studios (Splash Screen)</h4>
-            <a href="img/fireswing-splash/fireswing-v1.jpg" target="_blank" rel="nofollow"><img src="img/fireswing-splash/fireswing-v1.jpg" alt="fireswing v1"></a>
+            <a href="img/fireswing-splash/fireswing-v1.jpg" target="_blank" rel="noopener nofollow"><img src="img/fireswing-splash/fireswing-v1.jpg" alt="fireswing v1"></a>
             <p class="iterationDescription">This is the first version of the splash screen. I was still experimenting with the fluid dynamics to get the right look for the flame.</p>
 
-            <a href="img/fireswing-splash/fireswing-v2.jpg" target="_blank" rel="nofollow"><img src="img/fireswing-splash/fireswing-v2.jpg" alt="fireswing v2"></a>
+            <a href="img/fireswing-splash/fireswing-v2.jpg" target="_blank" rel="noopener nofollow"><img src="img/fireswing-splash/fireswing-v2.jpg" alt="fireswing v2"></a>
             <p class="iterationDescription">At this point, I had fine-tuned the fluid effects to get the desired look for the flames.</p>
 
-            <a href="img/fireswing-splash/fireswing-v3.jpg" target="_blank" rel="nofollow"><img src="img/fireswing-splash/fireswing-v3.jpg" alt="fireswing v3"></a>
+            <a href="img/fireswing-splash/fireswing-v3.jpg" target="_blank" rel="noopener nofollow"><img src="img/fireswing-splash/fireswing-v3.jpg" alt="fireswing v3"></a>
             <p class="iterationDescription">We wanted to try a lighter colored background.</p>
 
-            <a href="img/fireswing-splash/fireswing-v4.jpg" target="_blank" rel="nofollow"><img src="img/fireswing-splash/fireswing-v4.jpg" alt="fireswing v4"></a>
+            <a href="img/fireswing-splash/fireswing-v4.jpg" target="_blank" rel="noopener nofollow"><img src="img/fireswing-splash/fireswing-v4.jpg" alt="fireswing v4"></a>
             <p class="iterationDescription">It was requested to have a glass-breaking effect, just to see how it would look.</p>
 
-            <a href="img/fireswing-splash/fireswing-final.jpg" target="_blank" rel="nofollow"><img src="img/fireswing-splash/fireswing-final.jpg" alt="fireswing final"></a>
-            <p class="iterationDescription">This is a screenshot of the final render. You can see the full animation in my demo reel on <a href="//vimeo.com/95346384" target="_blank">Vimeo</a>.</p>
+            <a href="img/fireswing-splash/fireswing-final.jpg" target="_blank" rel="noopener nofollow"><img src="img/fireswing-splash/fireswing-final.jpg" alt="fireswing final"></a>
+            <p class="iterationDescription">This is a screenshot of the final render. You can see the full animation in my demo reel on <a href="//vimeo.com/95346384" target="_blank" rel="noopener">Vimeo</a>.</p>
           </div>
           
           <p class="showMore"><a class="showMoreLink" href="#3dWorkBlock" rel="nofollow">Show more.</a></p>
@@ -278,13 +280,13 @@
             </ul>
 
             <h4>Iterations</h4>
-            <a href="img/movie-poster/msandberg-218-movie-poster-v1.jpg" target="_blank" rel="nofollow"><img src="img/movie-poster/msandberg-218-movie-poster-v1.jpg" alt="msandberg 218 movie poster v1"></a>
+            <a href="img/movie-poster/msandberg-218-movie-poster-v1.jpg" target="_blank" rel="noopener nofollow"><img src="img/movie-poster/msandberg-218-movie-poster-v1.jpg" alt="msandberg 218 movie poster v1"></a>
             <p class="iterationDescription">This was my first pass at this poster.</p>
 
-            <a href="img/movie-poster/msandberg-218-movie-poster-v2.jpg" target="_blank" rel="nofollow"><img src="img/movie-poster/msandberg-218-movie-poster-v2.jpg" alt="msandberg 218 movie poster v2"></a>
+            <a href="img/movie-poster/msandberg-218-movie-poster-v2.jpg" target="_blank" rel="noopener nofollow"><img src="img/movie-poster/msandberg-218-movie-poster-v2.jpg" alt="msandberg 218 movie poster v2"></a>
             <p class="iterationDescription">Playing with alignment, spacing and overall size of the elements.</p>
 
-            <a href="img/movie-poster/msandberg-218-movie-poster-final.jpg" target="_blank" rel="nofollow"><img src="img/movie-poster/msandberg-218-movie-poster-final.jpg" alt="msandberg 218 movie poster final"></a>
+            <a href="img/movie-poster/msandberg-218-movie-poster-final.jpg" target="_blank" rel="noopener nofollow"><img src="img/movie-poster/msandberg-218-movie-poster-final.jpg" alt="msandberg 218 movie poster final"></a>
             <p class="iterationDescription">This was the final product, complete with blood-spatter graphic.</p>
           </div>
           
@@ -297,9 +299,9 @@
     <article class="contentArticle resumeArticle" id="resume">
       <h2>R&eacute;sum&eacute;</h2>
       <div>
-        <a href="img/mikkel-resume.pdf" target="_blank" rel="nofollow"><img src="img/mikkel-resume.jpg" alt="This is my resume. Download link below." /></a>
+        <a href="img/mikkel-sandberg-resume.pdf" target="_blank" rel="noopener nofollow"><img src="img/mikkel-sandberg-resume.jpg" alt="This is my resume. Download link below." /></a>
       </div>
-      <p><a href="img/mikkel-resume.pdf" target="_blank" rel="nofollow">Click here to download.</a></p>
+      <p><a href="img/mikkel-sandberg-resume.pdf" target="_blank" rel="noopener nofollow">Click here to download.</a></p>
     </article>
     <article class="contentArticle" id="about">
       <h2>About Me</h2>
@@ -318,16 +320,16 @@
         <section class="aboutSection">
           <h3>Social Media</h3>
           <div class="socialIcons">
-            <a class="twitter" href="//www.twitter.com/mikkelhsandberg" alt="twitter" target="_blank"></a>
-            <a class="facebook" href="//www.facebook.com/mikkelhsandberg" alt="facebook" target="_blank"></a>
-            <a class="linkedin" href="//www.linkedin.com/in/mikkelsandberg/" alt="linkedin" target="_blank"></a>
-            <a class="youtube" href="//www.youtube.com/channel/UCgA5nADU1preIGCu7KpjefQ" alt="youtube" target="_blank"></a>
+            <a class="twitter" href="//www.twitter.com/mikkelhsandberg" alt="twitter" target="_blank" rel="noopener"></a>
+            <a class="facebook" href="//www.facebook.com/mikkelhsandberg" alt="facebook" target="_blank" rel="noopener"></a>
+            <a class="linkedin" href="//www.linkedin.com/in/mikkelsandberg/" alt="linkedin" target="_blank" rel="noopener"></a>
+            <a class="youtube" href="//www.youtube.com/channel/UCgA5nADU1preIGCu7KpjefQ" alt="youtube" target="_blank" rel="noopener"></a>
           </div>
         </section>
 
         <section class="aboutSection">
           <h3>Contact</h3>
-          <p>You can reach me at: <a href="mailto:&#109;&#105;&#107;&#107;&#101;&#108;&#064;&#115;&#097;&#110;&#100;&#098;&#101;&#114;&#103;&#046;&#110;&#101;&#116;" target="_blank" rel="nofollow">&#109;&#105;&#107;&#107;&#101;&#108;&#064;&#115;&#097;&#110;&#100;&#098;&#101;&#114;&#103;&#046;&#110;&#101;&#116;</a></p>
+          <p>You can reach me at: <a href="mailto:&#109;&#105;&#107;&#107;&#101;&#108;&#064;&#115;&#097;&#110;&#100;&#098;&#101;&#114;&#103;&#046;&#110;&#101;&#116;" target="_blank" rel="noopener nofollow">&#109;&#105;&#107;&#107;&#101;&#108;&#064;&#115;&#097;&#110;&#100;&#098;&#101;&#114;&#103;&#046;&#110;&#101;&#116;</a></p>
         </section>
       </div>
     </article>
