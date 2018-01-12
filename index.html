@@ -32,9 +32,7 @@
   <meta name="twitter:image" content="http://mikkelsandberg.com/img/social-media-card-twitter.png">
   <!-- Helps prevent duplicate content issues -->
   <link rel="canonical" href="http://mikkelsandberg.com">
-  <!-- font awesome -->
-  <link rel="stylesheet" href="stylesheets/font-awesome.min.css" />
-  <!-- main styles -->
+  <!-- page styles -->
   <link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
 </head>
 
@@ -63,6 +61,7 @@
           <div class="prev carouselButton"></div>
           <div class="next carouselButton"></div>
           <div id="carousel">
+            <div id="expertsExchange-carouselImage" class="image"></div>
             <div id="apcEntertainment-carouselImage" class="image"></div>
             <div id="friendQuest-carouselImage" class="image"></div>
             <div id="animWork-carouselImage" class="image"></div>
@@ -72,8 +71,42 @@
       </div>
 
       <article class="descriptionBlock">
-        <section id="apcEntertainmentDescriptionSection" class="descriptionSection active">
-          <h3>APC Entertainment (Freelance)</h3>
+        <section id="expertsExchangeDescriptionSection" class="descriptionSection active">
+          <h3>Experts Exchange (Website)</h3>
+          <p class="workDescription">While working as a front end developer at Experts Exchange, I had the opportunity to work on many projects and help create the look and feel of the site. Some of my work that I am most proud of are the user profile redesign, the Live product redesign, and the creation of the Headlines feed. You can see more details on each below.</p>
+
+          <div class="moreSection">
+            <h4>Tools Used</h4>
+            <ul>
+              <li>HTML/CSS/JS</li>
+              <li>Photoshop</li>
+              <li>Illustrator</li>
+            </ul>
+
+            <h4>Profile Page Redesign</h4>
+            <a href="img/experts-exchange/ee-profile-page.jpg" target="_blank" rel="noopener nofollow"><img src="img/experts-exchange/ee-profile-page.jpg" alt="experts exchange profile page"></a>
+            <p class="iterationDescription">This is the new profile page that my team built. Our goal was to have the first section one sees on the page be a "business card" that would show information pertaining to the user's areas of expertise and skills. Further down in the overview section, the user can give information on their background (work history, education, and biography) to serve as a r&eacute;sum&eacute;. There are four other sections that asynchronously load in, which allow one to see a user's recent contributions on the site, certifications earned, ratings from Live or Gigs interactions, and endorsements that the user has given or received. On the right side, one can see the overall "level" of that user, see if the user has a "verified" account, and one can share the profile on social media. The profile owner also has a "preview" button. My role in this project was to create the HTML, CSS, and JS for more advanced user interactions than what pure HTML and CSS can provide.</p>
+
+            <h4>Live Product Redesign</h4>
+            <a href="img/experts-exchange/ee-live-landing-logged-in.jpg" target="_blank" rel="noopener nofollow"><img src="img/experts-exchange/ee-live-landing-logged-in.jpg" alt="experts exchange live logged in"></a>
+            <a href="img/experts-exchange/ee-live-help-request.jpg" target="_blank" rel="noopener nofollow"><img src="img/experts-exchange/ee-live-help-request.jpg" alt="experts exchange live help request"></a>
+            <p class="iterationDescription">The Live product allows clients to connect with consultants in a one-on-one conversation to get help with coding problems. The problem we were facing was that clients didn't know how to get started with the product. We used to show a list of all consultants who were online and allow clients to connect with anyone at random, so the requests were not a good fit a lot of the time and both sides got frustrated. So, we streamlined the whole process and made a help request form front and center for the client, as well as gave consultants the ability to set what topics they are willing to help in so that they would only show up in suggestion lists for certain topics. My role in this product was to mock up the initial designs in Photoshop for the help request page that lists the consultants available for a given request, and then to code all of the CSS to pull it off. I also provided some HTML structure when needed, but we were mostly just modifying a lot of components that already existed.</p>
+
+            <h4>Live Landing Page</h4>
+            <a href="img/experts-exchange/ee-live-landing-logged-out.jpg" target="_blank" rel="noopener nofollow"><img src="img/experts-exchange/ee-live-landing-logged-out.jpg" alt="experts exchange live logged out"></a>
+            <p class="iterationDescription">This was the logged out view for the Live product. The purpose of this page was to show the viewer why Live is valuable, how it works, and provide some testimonies from actual users &mdash; all in a beautifully designed and easy to use interface. I was responsible for taking the mockup provided by our UI team and create all the HTML and CSS needed to bring the page to life.</p>
+
+            <h4>Headlines Feed</h4>
+            <a href="img/experts-exchange/ee-headlines.jpg" target="_blank" rel="noopener nofollow"><img src="img/experts-exchange/ee-headlines.jpg" alt="experts exchange headlines feed"></a>
+            <p class="iterationDescription">Headlines was intended to be a place for users to see a feed of all the tech news from around the internet. Users had the ability to cater the feed to their needs by hiding specific stories they had already read or were not interested in, hide entire sources, or add new sources by importing RSS feeds. I was responsible for creating the look and feel of the feed, and I worked with my team's UI designer to come up with the final "card" design. Then, I created the HTML and CSS needed to make the cards arrange nicely at any screen size, and adjust to any number of card in the feed.</p>
+          </div>
+          
+          <p class="showMore"><a class="showMoreLink" href="#expertsExchangeDescriptionSection" rel="nofollow">Show more.</a></p>
+          <p class="showLess"><a class="showLessLink" href="#work" rel="nofollow">Show less.</a></p>
+        </section>
+
+        <section id="apcEntertainmentDescriptionSection" class="descriptionSection">
+          <h3>APC Entertainment (Website and Logo Design)</h3>
           <p class="workDescription">This was a website that I designed and coded for an acquaintance. The client was a DJ and needed a site that would showcase the services he provided, allow potential customers to get a price quote through an interactive "quote calculator," provide a way for users to book an event, display a media library, and have a contact form for general inquiries. You can check out the live site <a href="http://apcentertainment.net" target="_blank" rel="noopener">here</a>.</p>
 
           <div class="moreSection">
@@ -113,7 +146,7 @@
         </section>
 
         <section id="3dDescriptionSection" class="descriptionSection">
-          <h3>3D Work (Professional and Personal Projects)</h3>
+          <h3>3D Animation</h3>
           <p class="workDescription">You can find my current 3D animation demo reel on <a href="//vimeo.com/95346384" target="_blank" rel="noopener">Vimeo</a>. Most of these are personal projects to practice and develop my skills, ranging from fluid simulations to create fire effects, to original character concepts. FireSwing Studios was a start up that I worked at for a couple summers. I created a 3D rendered splash screen for the app that we were working on. Although this splash screen was never implemented, it is still one of my favorite things that I have made.</p>
 
           <div class="moreSection">
@@ -152,7 +185,7 @@
         </section>
 
         <section id="moviePosterDescriptionSection" class="descriptionSection">
-          <h3>Movie Poster Mockup (School Project)</h3>
+          <h3>Movie Poster Mockup (Graphic Design)</h3>
           <p class="workDescription">I had a class design project to create a movie poster for a fictitious film. I was only limited by the titles and images I could use; I could use these however I saw fit; there were other constraints, like needing to use a certain format for the bottom copy and movie rating graphics.</p>
 
           <div class="moreSection">
@@ -184,9 +217,44 @@
       <h2>My Work</h2>
 
       <section class="mobileWorkSection">
+        <div id="expertsExchangeBlock" class="workBlock">
+          <img src="img/mockups/ee-logo.jpg" alt="experts exchange logo" />
+          <h3>Experts Exchange (Website)</h3>
+          <p class="workDescription">While working as a front end developer at Experts Exchange, I had the opportunity to work on many projects and help create the look and feel of the site. Some of my work that I am most proud of are the user profile redesign, the Live product redesign, and the creation of the Headlines feed. You can see more details on each below.</p>
+
+          <div class="moreSection">
+            <h4>Tools Used</h4>
+            <ul>
+              <li>HTML/CSS/JS</li>
+              <li>Photoshop</li>
+              <li>Illustrator</li>
+            </ul>
+
+            <h4>Profile Page Redesign</h4>
+            <a href="img/experts-exchange/ee-profile-page.jpg" target="_blank" rel="noopener nofollow"><img src="img/experts-exchange/ee-profile-page.jpg" alt="experts exchange profile page"></a>
+            <p class="iterationDescription">This is the new profile page that my team built. Our goal was to have the first section one sees on the page be a "business card" that would show information pertaining to the user's areas of expertise and skills. Further down in the overview section, the user can give information on their background (work history, education, and biography) to serve as a r&eacute;sum&eacute;. There are four other sections that asynchronously load in, which allow one to see a user's recent contributions on the site, certifications earned, ratings from Live or Gigs interactions, and endorsements that the user has given or received. On the right side, one can see the overall "level" of that user, see if the user has a "verified" account, and one can share the profile on social media. The profile owner also has a "preview" button. My role in this project was to create the HTML, CSS, and JS for more advanced user interactions than what pure HTML and CSS can provide.</p>
+
+            <h4>Live Product Redesign</h4>
+            <a href="img/experts-exchange/ee-live-landing-logged-in.jpg" target="_blank" rel="noopener nofollow"><img src="img/experts-exchange/ee-live-landing-logged-in.jpg" alt="experts exchange live logged in"></a>
+            <a href="img/experts-exchange/ee-live-help-request.jpg" target="_blank" rel="noopener nofollow"><img src="img/experts-exchange/ee-live-help-request.jpg" alt="experts exchange live help request"></a>
+            <p class="iterationDescription">The Live product allows clients to connect with consultants in a one-on-one conversation to get help with coding problems. The problem we were facing was that clients didn't know how to get started with the product. We used to show a list of all consultants who were online and allow clients to connect with anyone at random, so the requests were not a good fit a lot of the time and both sides got frustrated. So, we streamlined the whole process and made a help request form front and center for the client, as well as gave consultants the ability to set what topics they are willing to help in so that they would only show up in suggestion lists for certain topics. My role in this product was to mock up the initial designs in Photoshop for the help request page that lists the consultants available for a given request, and then to code all of the CSS to pull it off. I also provided some HTML structure when needed, but we were mostly just modifying a lot of components that already existed.</p>
+
+            <h4>Live Landing Page</h4>
+            <a href="img/experts-exchange/ee-live-landing-logged-out.jpg" target="_blank" rel="noopener nofollow"><img src="img/experts-exchange/ee-live-landing-logged-out.jpg" alt="experts exchange live logged out"></a>
+            <p class="iterationDescription">This was the logged out view for the Live product. The purpose of this page was to show the viewer why Live is valuable, how it works, and provide some testimonies from actual users &mdash; all in a beautifully designed and easy to use interface. I was responsible for taking the mockup provided by our UI team and create all the HTML and CSS needed to bring the page to life.</p>
+
+            <h4>Headlines Feed</h4>
+            <a href="img/experts-exchange/ee-headlines.jpg" target="_blank" rel="noopener nofollow"><img src="img/experts-exchange/ee-headlines.jpg" alt="experts exchange headlines feed"></a>
+            <p class="iterationDescription">Headlines was intended to be a place for users to see a feed of all the tech news from around the internet. Users had the ability to cater the feed to their needs by hiding specific stories they had already read or were not interested in, hide entire sources, or add new sources by importing RSS feeds. I was responsible for creating the look and feel of the feed, and I worked with my team's UI designer to come up with the final "card" design. Then, I created the HTML and CSS needed to make the cards arrange nicely at any screen size, and adjust to any number of card in the feed.</p>
+          </div>
+          
+          <p class="showMore"><a class="showMoreLink" href="#expertsExchangeBlock" rel="nofollow">Show more.</a></p>
+          <p class="showLess"><a class="showLessLink" href="#expertsExchangeBlock" rel="nofollow">Show less.</a></p>
+        </div>
+
         <div id="apcEntertainmentBlock" class="workBlock">
           <img src="img/mockups/apc-entertainment.png" alt="apc entertainment mockup" />
-          <h3>APC Entertainment (Freelance)</h3>
+          <h3>APC Entertainment (Website and Logo Design)</h3>
           <p class="workDescription">This was a website that I designed and coded for an acquaintance. The client was a DJ and needed a site that would showcase the services he provided, allow potential customers to get a price quote through an interactive "quote calculator," provide a way for users to book an event, display a media library, and have a contact form for general inquiries. You can check out the live site <a href="http://apcentertainment.net" target="_blank" rel="noopener">here</a>.</p>
 
           <div class="moreSection">
@@ -228,7 +296,7 @@
 
         <div id="3dWorkBlock" class="workBlock">
           <img src="img/mockups/anim-work-mockup.jpg" alt="img 1" />
-          <h3>3D Work (Professional and Personal Projects)</h3>
+          <h3>3D Animation</h3>
           <p class="workDescription">You can find my current 3D animation demo reel on <a href="//vimeo.com/95346384" target="_blank">Vimeo</a>. Most of these are personal projects to practice and develop my skills, ranging from fluid simulations to create fire effects, to original character concepts. FireSwing Studios was a start up that I worked at for a couple summers. I created a 3D rendered splash screen for the app that we were working on. Although this splash screen was never implemented, it is still one of my favorite things that I have made.</p>
 
           <div class="moreSection">
@@ -268,7 +336,7 @@
 
         <div id="moviePosterWorkBlock" class="workBlock">
           <img src="img/mockups/movie-poster-mockup.jpg" alt="img 3" />
-          <h3>Movie Poster Mockup (School Project)</h3>
+          <h3>Movie Poster Mockup (Graphic Design)</h3>
           <p class="workDescription">I had a class design project to create a movie poster for a fictitious film. I was only limited by the titles and images I could use; I could use these however I saw fit; there were other constraints, like needing to use a certain format for the bottom copy and movie rating graphics.</p>
 
           <div class="moreSection">

@@ -1,9 +1,11 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/*
+  Welcome to Compass.
+  In this file you should write your main styles. (or centralize your imports)
+  Import this file using the following HTML or equivalent:
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
 
-@import compass/reset
+@import reset.css
+@import font-awesome.min.css
 
 // fonts
 /* latin-ext */
@@ -154,9 +156,9 @@ p
   line-height: 2rem
 a
   &:link, &:visited
-  color: $linkColor
-  text-decoration: none
-  +transition
+    color: $linkColor
+    text-decoration: none
+    +transition
   &:hover
     color: lighten($linkColor, 10)
 
@@ -218,7 +220,7 @@ a
   text-align: center
   .imageContainer
     width: 384px
-    height: 216px
+    height: 215px
     margin: 0 auto 100px
     position: relative
     perspective: 2500px
@@ -264,6 +266,8 @@ a
         background-size: 100%
         background-color: #fff
         background-position: center
+        &#expertsExchange-carouselImage
+          background-image: url(../img/mockups/ee-logo.jpg)
         &#apcEntertainment-carouselImage
           background-image: url(../img/mockups/apc-entertainment.png)
         &#animWork-carouselImage
@@ -278,7 +282,7 @@ a
 
 .descriptionBlock
   min-height: 300px
-  max-width: 514px
+  max-width: 700px
   position: relative
   margin: 0 auto
   &:before
