@@ -1,4 +1,4 @@
-// global variables 
+// global variables
 const initCarouselObj = [];
 let selected = 1;
 const numCarouselItems = $('#carousel').children().length;
@@ -16,7 +16,8 @@ const showLessMobile = $('.workBlock .showLessLink');
 
 // typing effect; initialized after page loaded
 const initTypist = function() {
-  $('#what-i-like').typist({
+  $('#what-i-like')
+    .typist({
       speed: 10
     })
     .typistPause(1000)
@@ -54,7 +55,7 @@ const initTypist = function() {
 
 const initStickyNav = function() {
   $(window).scroll(function() {
-    if($(window).scrollTop() >= $(window).height()) {
+    if ($(window).scrollTop() >= $(window).height()) {
       $('nav ul').addClass('fixed');
     } else {
       $('nav ul').removeClass('fixed');
@@ -80,7 +81,10 @@ const initCarousel = function() {
     if (initCarouselObj[i].num == selected) {
       carouselImgIthChild.css('transform', `rotateY(${initCarouselObj[i].rotY}deg) translateZ(${selectedDistance}px)`);
     } else {
-      carouselImgIthChild.css('transform', `rotateY(${initCarouselObj[i].rotY}deg) translateZ(${notSelectedDistance}px)`);
+      carouselImgIthChild.css(
+        'transform',
+        `rotateY(${initCarouselObj[i].rotY}deg) translateZ(${notSelectedDistance}px)`
+      );
     }
   }
 };
@@ -89,8 +93,12 @@ const watchNextButton = function() {
   $('.next').click(function() {
     $(descriptionSection).removeClass('active');
     $(moreSection).removeClass('show');
-    $(showMore).parent().show();
-    $(showLess).parent().hide();
+    $(showMore)
+      .parent()
+      .show();
+    $(showLess)
+      .parent()
+      .hide();
 
     if (selected == initCarouselObj.length - 1) {
       selected = 1;
@@ -112,12 +120,18 @@ const watchNextButton = function() {
       let carouselImgIthChild = $('#carousel .image:nth-child(' + i + ')');
 
       if (initCarouselObj[i].num == selected) {
-        carouselImgIthChild.css('transform', `rotateY(${initCarouselObj[i].rotY - degOffset}deg) translateZ(${selectedDistance}px)`);
+        carouselImgIthChild.css(
+          'transform',
+          `rotateY(${initCarouselObj[i].rotY - degOffset}deg) translateZ(${selectedDistance}px)`
+        );
       } else {
-        carouselImgIthChild.css('transform', `rotateY(${initCarouselObj[i].rotY - degOffset}deg) translateZ(${notSelectedDistance}px)`);
+        carouselImgIthChild.css(
+          'transform',
+          `rotateY(${initCarouselObj[i].rotY - degOffset}deg) translateZ(${notSelectedDistance}px)`
+        );
       }
 
-      initCarouselObj[i].rotY = (initCarouselObj[i].rotY - degOffset);
+      initCarouselObj[i].rotY = initCarouselObj[i].rotY - degOffset;
     }
   });
 };
@@ -126,8 +140,12 @@ const watchPrevButton = function() {
   $('.prev').click(function() {
     $(descriptionSection).removeClass('active');
     $(moreSection).removeClass('show');
-    $(showMore).parent().show();
-    $(showLess).parent().hide();
+    $(showMore)
+      .parent()
+      .show();
+    $(showLess)
+      .parent()
+      .hide();
 
     if (selected == 1) {
       selected = initCarouselObj.length - 1;
@@ -149,43 +167,77 @@ const watchPrevButton = function() {
       let carouselImgIthChild = $('#carousel .image:nth-child(' + i + ')');
 
       if (initCarouselObj[i].num == selected) {
-        carouselImgIthChild.css('transform', `rotateY(${initCarouselObj[i].rotY + degOffset}deg) translateZ(${selectedDistance}px)`);
+        carouselImgIthChild.css(
+          'transform',
+          `rotateY(${initCarouselObj[i].rotY + degOffset}deg) translateZ(${selectedDistance}px)`
+        );
       } else {
-        carouselImgIthChild.css('transform', `rotateY(${initCarouselObj[i].rotY + degOffset}deg) translateZ(${notSelectedDistance}px)`);
+        carouselImgIthChild.css(
+          'transform',
+          `rotateY(${initCarouselObj[i].rotY + degOffset}deg) translateZ(${notSelectedDistance}px)`
+        );
       }
 
-      initCarouselObj[i].rotY = (initCarouselObj[i].rotY + degOffset);
+      initCarouselObj[i].rotY = initCarouselObj[i].rotY + degOffset;
     }
   });
 };
 
 const watchMoreToggle = function() {
   $(showMore).click(function() {
-    $(this).parent().toggle()
-      .next().toggle();
+    $(this)
+      .parent()
+      .toggle()
+      .next()
+      .toggle();
 
-    $(this).parent().parent().find($(moreSection)).addClass('show');
+    $(this)
+      .parent()
+      .parent()
+      .find($(moreSection))
+      .addClass('show');
   });
 
   $(showLess).click(function() {
-    $(this).parent().toggle()
-      .prev().toggle();
+    $(this)
+      .parent()
+      .toggle()
+      .prev()
+      .toggle();
 
-    $(this).parent().parent().find($(moreSection)).removeClass('show');
+    $(this)
+      .parent()
+      .parent()
+      .find($(moreSection))
+      .removeClass('show');
   });
 
   $(showMoreMobile).click(function() {
-    $(this).parent().toggle()
-      .next().toggle();
+    $(this)
+      .parent()
+      .toggle()
+      .next()
+      .toggle();
 
-    $(this).parent().parent().find($(moreSection)).addClass('show');
+    $(this)
+      .parent()
+      .parent()
+      .find($(moreSection))
+      .addClass('show');
   });
 
   $(showLessMobile).click(function() {
-    $(this).parent().toggle()
-      .prev().toggle();
+    $(this)
+      .parent()
+      .toggle()
+      .prev()
+      .toggle();
 
-    $(this).parent().parent().find($(moreSection)).removeClass('show');
+    $(this)
+      .parent()
+      .parent()
+      .find($(moreSection))
+      .removeClass('show');
   });
 };
 
@@ -207,19 +259,25 @@ const toggleLinkTopSticky = function() {
       $('.topLink').removeClass('notFixed');
     }
   });
-}
+};
 
 // smooth scroll courtesy of Karl Swedberg: http://www.learningjquery.com/2007/10/improved-animated-scrolling-script-for-same-page-links
 const initSmoothScroll = function() {
   $(function() {
     $('a[href*=#]:not([href=#])').click(function() {
-      if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+      if (
+        location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
+        location.hostname == this.hostname
+      ) {
         let target = $(this.hash);
         target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
         if (target.length) {
-          $('html,body').animate({
-            scrollTop: target.offset().top
-          }, 700);
+          $('html,body').animate(
+            {
+              scrollTop: target.offset().top
+            },
+            700
+          );
           return false;
         }
       }

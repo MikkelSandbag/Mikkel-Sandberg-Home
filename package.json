@@ -11,7 +11,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "minifyandbuild": "minify src -d min && babel min -d js"
+    "build": "babel src -d min && minify min -d js"
   },
   "repository": {
     "type": "git",
