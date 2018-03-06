@@ -1,0 +1,386 @@
+@import reset.css
+@import font-awesome.min.css
+
+// variables
+$bodyTextColor: #333
+$h2Color: $bodyTextColor
+$h3Color: #e61e26
+$linkColor: $h3Color
+$navBackgroundColor: #ccc
+
+// mixins
+=transition
+  transition: all 0.26s ease-in-out
+=headingText
+  text-transform: uppercase
+=linkOuter
+  line-height: 1
+  position: relative
+  display: inline-block
+=linkInner
+  content: ''
+  display: block
+  width: 100%
+  height: 100%
+  border-bottom: 1px dashed
+  position: absolute
+  bottom: -2px
+=vertAndHorizCenter
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+=displayFlex
+  display: -ms-flex
+  display: -webkit-flex
+  display: flex
+=flexAlignItems($alignment)
+  -ms-align-items: $alignment
+  -webkit-align-items: $alignment
+  align-items: $alignment
+=flexWrap($wrapBehavior)
+  -ms-flex-wrap: $wrapBehavior
+  -webkit-flex-wrap: $wrapBehavior
+  flex-wrap: $wrapBehavior
+=flexJustifyContent($alignment)
+  -ms-justify-content: $alignment
+  -webkit-justify-content: $alignment
+  justify-content: $alignment
+=flexShorthand($flex-grow, $flex-shrink, $flex-basis)
+  -ms-flex: $flex-grow $flex-shrink $flex-basis
+  -webkit-flex: $flex-grow $flex-shrink $flex-basis
+  flex: $flex-grow $flex-shrink $flex-basis
+
+// text styles
+html
+  font-size: 16px
+body
+  font-family: 'canada-type-gibson', sans-serif
+  .loadingText
+    display: none
+  &.loading
+    overflow: hidden
+    .loadingText
+      display: block
+      z-index: 3000
+      +vertAndHorizCenter
+      position: fixed
+      h6
+        font-size: 2rem
+        font-weight: 600
+        color: $h3Color
+        text-align: center
+      p
+        font-size: 1rem
+        text-align: center
+    &:before
+      content: ''
+      width: 100vw
+      height: 100vh
+      display: block
+      position: fixed
+      background-color: #fff
+      z-index: 2000
+h1
+  font-size: 3rem
+  font-weight: 400
+  line-height: 1.2em
+  color: $bodyTextColor
+  text-align: center
+  background-color: rgba(255,255,255,0.4)
+  padding: 70px
+  width: 750px
+  box-sizing: border-box
+  +vertAndHorizCenter
+  +headingText
+h2
+  font-size: 3rem
+  font-weight: 600
+  line-height: 1.2em
+  color: $h2Color
+h3
+  font-size: 1.5rem
+  font-weight: 600
+  line-height: 1.2em
+  color: $h3Color
+  margin-bottom: 20px
+  .details
+    display: block
+    font-weight: 400
+    color: $bodyTextColor
+h4
+  @extend h3
+  color: $bodyTextColor
+p
+  color: $bodyTextColor
+  text-align: left
+  font-size: 1.25rem
+  line-height: 2rem
+  a:link, a:visited
+    +linkOuter
+    &:after
+      +linkInner
+a
+  &:link, &:visited
+    color: $linkColor
+    text-decoration: none
+
+// top splash section
+.mainSplash
+  position: fixed
+  width: 100%
+  height: 100%
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  z-index: 1
+  a
+    position: absolute
+    bottom: 0
+    left: 50%
+    transform: translateX(-50%)
+  .heroImage:before
+    content: ''
+    background-image: url(../img/mikkel-hero-image.jpg)
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center center
+    display: block
+    width: 100vw
+    height: 100vh
+.next-arrow
+  font-size: 8rem
+  color: #fff
+  position: absolute
+  bottom: 0
+  left: 50%
+  transform: translateX(-50%)
+  animation: arrow-bounce 2s infinite
+  @keyframes arrow-bounce
+    0%, 100%
+      transform: translateY(0) translateX(-50%)
+    50%
+      transform: translateY(-20px) translateX(-50%)
+    
+// after splash sections
+.afterSplash
+  position: absolute
+  width: 100%
+  top: 100%
+  z-index: 100
+  background: #fff
+
+// content sections
+.contentArticle
+  max-width: 1024px
+  padding: 0 48px
+  margin: 48px auto
+
+// work section
+.workBlock
+  padding-top: 48px
+  img
+    width: auto
+    max-width: 100%
+    display: block
+    margin: 0 auto 20px
+  .projectWrapper
+    +displayFlex
+    +flexWrap(wrap)
+    h4
+      margin: 48px 0 10px
+      +flexShorthand(1, 0, 100%)
+    .toolsWrapper
+      +flexShorthand(1, 0, 15%)
+      h4
+        font-size: 1.25rem
+        line-height: 2rem
+        margin-top: 0
+      ul
+        li
+          line-height: 1.25rem
+          text-indent: 10px
+          &:before
+            content: "\2012"
+            font-weight: 600
+            margin-right: 5px
+    .imageLink
+      +flexShorthand(1, 0, 100%)
+    .iterationDescription
+      border-left: 1px solid $navBackgroundColor
+      padding-left: 5%
+      margin-left: 5%
+      box-sizing: border-box
+      +flexShorthand(1, 0, 80%)
+
+  .showMore, .showLess
+    text-align: center
+    margin-top: 20px
+    .showMoreLink:link, .showMoreLink:visited
+      +linkOuter
+      &:after
+        +linkInner
+
+.moreSection
+  display: none
+  .showLessLink:link, .showLessLink:visited
+    +linkOuter
+    &:after
+      +linkInner
+
+.friendQuestPlayer
+  margin: 20px 0 40px
+
+// resume section
+.resumeArticle
+  .resumeWrapper
+    text-align: center
+    margin: 48px auto 20px
+    img
+      box-shadow: 0 0 5px 0 #bbb
+      width: 100%
+      +transition
+      &:hover
+        box-shadow: 0 0 15px 2px #bbb
+        transform: scale(1.01)
+      a
+        display: inline-block
+  p
+    text-align: center
+    a
+      &:hover
+        color: lighten($linkColor, 10)
+
+// about me section
+.aboutOuterWrapper
+  +displayFlex
+  +flexWrap(wrap)
+  +flexJustifyContent(space-between)
+  .aboutSection
+    +flexShorthand(1, 0, 50%)
+    max-width: 45%
+    margin-top: 48px
+    
+.socialIcons
+  +displayFlex
+  a
+    +flexShorthand(0, 0, auto)
+    &:not(:first-of-type)
+      margin-left: 15px
+    &:before
+      content: ''
+      background-image: url(../img/social-icons-sprite.png)
+      background-size: cover
+      background-repeat: no-repeat
+      display: block
+      width: 50px
+      height: 50px
+    &.linkedin:before
+      background-position: 0 -58px
+    &.twitter:before
+      background-position: 0 -116px
+    &.youtube:before
+      background-position: 0 -171px
+
+//footer
+footer
+  background-color: $navBackgroundColor
+  padding: 20px 48px
+  .footerInner
+    +displayFlex
+    +flexAlignItems(center)
+    margin: 0 auto
+    max-width: 1280px
+    > *
+      +flexShorthand(1, 0, 50%)
+.footerNav
+  li + *
+    padding-top: 10px
+.copyright
+  font-size: 1rem
+  text-align: right
+
+// media queries
+@media only screen and (max-width: 1024px)
+  .resumeArticle
+    div
+      img
+        &:hover
+          box-shadow: 0 0 5px 0 #bbb
+          transform: none
+
+@media only screen and (max-width: 767px)
+  h1
+    font-size: 2rem
+    padding: 50px
+    width: 100%
+    max-width: 450px
+
+  h2
+    margin-bottom: 20px
+
+  .next-arrow
+    font-size: 5rem
+
+  .desktopWork
+    display: none
+  .mobileWork
+    display: block
+
+  .contentArticle
+    padding: 20px 20px 0
+    margin: 0
+
+  .workBlock
+    padding-top: 20px
+    .projectWrapper
+      h4
+        margin-top: 20px
+      .toolsWrapper
+        +flexShorthand(1, 0, 100%)
+      .iterationDescription
+        border-left: 0
+        border-top: 1px solid $navBackgroundColor
+        padding-left: 0
+        padding-top: 20px
+        margin-top: 20px
+        margin-left: 0
+        +flexShorthand(1, 0, 100%)
+
+  .resumeArticle
+    div
+      width: 100%
+    p
+      width: 100%
+  .aboutOuterWrapper
+    .aboutSection
+      +flexShorthand(1, 0, 100%)
+      max-width: none
+      margin-top: 20px
+  footer
+    margin-top: 20px
+    .footerInner
+      +displayFlex
+      +flexAlignItems(center)
+      +flexWrap(wrap)
+      +flexJustifyContent(center)
+      > *
+        +flexShorthand(1, 0, 100%)
+  .footerNav
+    +displayFlex
+    +flexWrap(wrap)
+    li
+      +flexShorthand(1, 0, auto)
+      text-align: center
+      padding-top: 20px
+      &:first-of-type
+        +flexShorthand(0, 0, 100%)
+        padding-top: 0
+  .copyright
+    line-height: 1.5
+    text-align: center
+    padding-top: 20px
+    max-width: 170px
+  .topLink
+    &.notFixed
+      bottom: 180px
