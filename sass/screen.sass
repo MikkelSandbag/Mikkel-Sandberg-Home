@@ -1,30 +1,74 @@
+/*
+  Welcome to Compass.
+  In this file you should write your main styles. (or centralize your imports)
+  Import this file using the following HTML or equivalent:
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+
 @import reset.css
 @import font-awesome.min.css
 
+// fonts
+/* latin-ext */
+@font-face
+  font-family: 'Oswald'
+  font-style: normal
+  font-weight: 300
+  src: url(../fonts/Oswald-Light.ttf)
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF
+/* latin */
+@font-face 
+  font-family: 'Oswald'
+  font-style: normal
+  font-weight: 300
+  src: url(../fonts/Oswald-Light.ttf)
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000
+
+/* latin-ext */
+@font-face 
+  font-family: 'Oswald'
+  font-style: normal
+  font-weight: 400
+  src: url(../fonts/Oswald-Regular.ttf)
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF
+
+/* latin */
+@font-face 
+  font-family: 'Oswald'
+  font-style: normal
+  font-weight: 400
+  src: url(../fonts/Oswald-Regular.ttf)
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000
+
+/* latin-ext */
+@font-face 
+  font-family: 'Oswald'
+  font-style: normal
+  font-weight: 700
+  src: url(../fonts/Oswald-Bold.ttf)
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF
+
+/* latin */
+@font-face 
+  font-family: 'Oswald'
+  font-style: normal
+  font-weight: 700
+  src: url(../fonts/Oswald-Bold.ttf)
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000
+
+
 // variables
-$bodyTextColor: #333
-$h2Color: $bodyTextColor
-$h3Color: #e61e26
-$linkColor: $h3Color
+$h1Color: #195bad
+$h2Color: #5ba9c2
+$h3Color: #a85950
+$linkColor: #cc514a
 $navBackgroundColor: #ccc
+$bodyTextColor: #333
 
 // mixins
 =transition
   transition: all 0.26s ease-in-out
 =headingText
   text-transform: uppercase
-=linkOuter
-  line-height: 1
-  position: relative
-  display: inline-block
-=linkInner
-  content: ''
-  display: block
-  width: 100%
-  height: 100%
-  border-bottom: 1px dashed
-  position: absolute
-  bottom: -2px
 =vertAndHorizCenter
   position: absolute
   top: 50%
@@ -55,7 +99,7 @@ $navBackgroundColor: #ccc
 html
   font-size: 16px
 body
-  font-family: 'canada-type-gibson', sans-serif
+  font-family: 'Oswald', sans-serif
   .loadingText
     display: none
   &.loading
@@ -67,12 +111,11 @@ body
       position: fixed
       h6
         font-size: 2rem
-        font-weight: 600
         color: $h3Color
         text-align: center
       p
-        font-size: 1rem
         text-align: center
+        margin-top: 1rem
     &:before
       content: ''
       width: 100vw
@@ -83,47 +126,41 @@ body
       z-index: 2000
 h1
   font-size: 3rem
-  font-weight: 400
   line-height: 1.2em
   color: $bodyTextColor
   text-align: center
   background-color: rgba(255,255,255,0.4)
   padding: 70px
-  width: 750px
+  width: 650px
   box-sizing: border-box
   +vertAndHorizCenter
   +headingText
 h2
   font-size: 3rem
-  font-weight: 600
   line-height: 1.2em
   color: $h2Color
+  margin-bottom: 100px
+  +headingText
 h3
   font-size: 1.5rem
-  font-weight: 600
   line-height: 1.2em
   color: $h3Color
   margin-bottom: 20px
-  .details
-    display: block
-    font-weight: 400
-    color: $bodyTextColor
+  +headingText
 h4
   @extend h3
-  color: $bodyTextColor
 p
   color: $bodyTextColor
   text-align: left
   font-size: 1.25rem
   line-height: 2rem
-  a:link, a:visited
-    +linkOuter
-    &:after
-      +linkInner
 a
   &:link, &:visited
     color: $linkColor
     text-decoration: none
+    +transition
+  &:hover
+    color: lighten($linkColor, 10)
 
 // top splash section
 .mainSplash
@@ -172,70 +209,151 @@ a
 
 // content sections
 .contentArticle
-  max-width: 1024px
-  padding: 0 48px
-  margin: 48px auto
+  max-width: 1280px
+  margin: 0 auto
+  padding: 48px
+  overflow: hidden
 
-// work section
-.workBlock
-  padding-top: 48px
-  img
-    width: auto
-    max-width: 100%
-    display: block
-    margin: 0 auto 20px
-  .projectWrapper
-    +displayFlex
-    +flexWrap(wrap)
-    h4
-      margin: 48px 0 10px
-      +flexShorthand(1, 0, 100%)
-    .toolsWrapper
-      +flexShorthand(1, 0, 15%)
-      h4
-        font-size: 1.25rem
-        line-height: 2rem
-        margin-top: 0
-      ul
-        li
-          line-height: 1.25rem
-          text-indent: 10px
-          &:before
-            content: "\2012"
-            font-weight: 600
-            margin-right: 5px
-    .imageLink
-      +flexShorthand(1, 0, 100%)
-    .iterationDescription
-      border-left: 1px solid $navBackgroundColor
-      padding-left: 5%
-      margin-left: 5%
-      box-sizing: border-box
-      +flexShorthand(1, 0, 80%)
+// my work
+.carouselWrapper
+  margin: 140px 0 0
+  text-align: center
+  .imageContainer
+    width: 384px
+    height: 215px
+    margin: 0 auto 100px
+    position: relative
+    perspective: 2500px
+    .carouselButton
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      cursor: pointer
+      z-index: 10
+      &:before          
+        font-family: FontAwesome
+        font-size: 7rem
+        color: $bodyTextColor
+        +vertAndHorizCenter
+        +transition
+      &:hover:before
+        transform: translate(-50%, -50%) scale(1.1)
+    .prev
+      left: -120px
+      &:before
+        content: "\f104"
+    .next
+      right: -120px
+      &:before
+        content: "\f105"
 
-  .showMore, .showLess
-    text-align: center
-    margin-top: 20px
-    .showMoreLink:link, .showMoreLink:visited
-      +linkOuter
-      &:after
-        +linkInner
+    #carousel
+      width: 100%
+      height: 100%
+      position: absolute
+      transform-style: preserve-3d
+      .image
+        display: block
+        position: absolute
+        left: 19px
+        top: 10px
+        width: 90%
+        height: 90%
+        transition: transform .75s ease-in-out
+        backface-visibility: hidden
+        box-shadow: 0px 35px 60px -35px #333
+        background-repeat: no-repeat
+        background-size: 100%
+        background-color: #fff
+        background-position: center
+        &#expertsExchange-carouselImage
+          background-image: url(../img/mockups/ee-logo.jpg)
+        &#apcEntertainment-carouselImage
+          background-image: url(../img/mockups/apc-entertainment.png)
+        &#animWork-carouselImage
+          background-image: url(../img/mockups/anim-work-mockup.jpg)
+        &#moviePoster-carouselImage
+          background-image: url(../img/mockups/movie-poster-mockup.jpg)
+        &#friendQuest-carouselImage
+          background-image: url(../img/mockups/friend-quest.png)
 
-.moreSection
+.mobileWork
   display: none
-  .showLessLink:link, .showLessLink:visited
-    +linkOuter
-    &:after
-      +linkInner
 
+.descriptionBlock
+  min-height: 300px
+  max-width: 700px
+  position: relative
+  margin: 0 auto
+  &:before
+    content: ""
+    position: absolute
+    left: 0
+    top: 0
+    height: 1px
+    width: 100%
+    background-image: linear-gradient(to right, rgba(204,204,204,0), rgba(204,204,204,1), rgba(204,204,204,1), rgba(204,204,204,1), rgba(204,204,204,0) )
+
+.descriptionSection
+  height: 0
+  opacity: 0
+  visibility: hidden
+  &.active
+    height: initial
+    visibility: visible
+    opacity: 1
+    margin: 0 auto
+    padding-top: 50px
+    transition: opacity 0.75s ease-in-out
+  h3
+    text-align: center
+    a:link, a:visited
+      color: $linkColor
+      text-decoration: none
+      +transition
+    a:hover
+      color: lighten($linkColor, 10)
+  .showLess
+    display: none
+.moreSection
+  opacity: 0
+  visibility: hidden
+  height: 0
+  margin: 0
+  +transition
+  h4
+    font-size: 1.25rem
+    text-align: left
+    margin: 20px 0 10px
+  ul
+    li
+      line-height: 1.25rem
+      text-indent: 10px
+      &:before
+        content: "\2012"
+        font-weight: 600
+        margin-right: 5px
+  img
+    width: 100%
+    margin: 10px 0
+    border: 1px solid #ddd
+  .iterationDescription
+    margin-bottom: 40px
+  &.show
+    opacity: 1
+    visibility: visible
+    height: initial
+  .episodeList
+    margin: 10px 0 40px
 .friendQuestPlayer
   margin: 20px 0 40px
 
 // resume section
 .resumeArticle
-  .resumeWrapper
+  div
     text-align: center
-    margin: 48px auto 20px
+    max-width: 8.5in
+    margin: 50px auto 20px
     img
       box-shadow: 0 0 5px 0 #bbb
       width: 100%
@@ -246,21 +364,27 @@ a
       a
         display: inline-block
   p
-    text-align: center
+    max-width: 8.5in
+    margin: 0 auto
     a
       &:hover
         color: lighten($linkColor, 10)
 
 // about me section
-.aboutOuterWrapper
-  +displayFlex
-  +flexWrap(wrap)
-  +flexJustifyContent(space-between)
+#about
+  overflow: hidden
+.aboutRow
+  overflow: hidden
+  margin-bottom: 100px
+  &:last-child
+    margin-bottom: 0
   .aboutSection
-    +flexShorthand(1, 0, 50%)
-    max-width: 45%
-    margin-top: 48px
-    
+    width: 50%
+    padding-right: 48px
+    box-sizing: border-box
+    float: left
+    &:last-child
+      padding-right: 0
 .socialIcons
   +displayFlex
   a
@@ -281,6 +405,32 @@ a
       background-position: 0 -116px
     &.youtube:before
       background-position: 0 -171px
+
+// link to top
+.topLink
+  display: none
+  position: fixed
+  bottom: 20px
+  right: 5px
+  z-index: 1000
+  transition: none
+  &:link, &:visited
+    color: $bodyTextColor
+    font:
+      size: 2rem
+      weight: 100
+  &:before
+    display: block
+    content: '\f106'
+    font:
+      family: 'FontAwesome'
+      size: 2.5rem
+    text-align: center
+  &.show
+    display: block !important
+  &.notFixed
+    position: absolute
+    bottom: 180px
 
 //footer
 footer
@@ -317,7 +467,7 @@ footer
     max-width: 450px
 
   h2
-    margin-bottom: 20px
+    margin-bottom: 48px
 
   .next-arrow
     font-size: 5rem
@@ -326,39 +476,30 @@ footer
     display: none
   .mobileWork
     display: block
+  .workBlock
+    margin: -48px 0 48px
+    padding-top: 48px
+    img
+      width: 100%
+      margin-bottom: 20px
+    .showLess
+      display: none
 
   .contentArticle
-    padding: 20px 20px 0
-    margin: 0
-
-  .workBlock
-    padding-top: 20px
-    .projectWrapper
-      h4
-        margin-top: 20px
-      .toolsWrapper
-        +flexShorthand(1, 0, 100%)
-      .iterationDescription
-        border-left: 0
-        border-top: 1px solid $navBackgroundColor
-        padding-left: 0
-        padding-top: 20px
-        margin-top: 20px
-        margin-left: 0
-        +flexShorthand(1, 0, 100%)
-
+    padding: 48px 48px 0
   .resumeArticle
     div
       width: 100%
     p
       width: 100%
-  .aboutOuterWrapper
+  .aboutRow
+    margin: 0
     .aboutSection
-      +flexShorthand(1, 0, 100%)
-      max-width: none
-      margin-top: 20px
+      float: none
+      width: 100%
+      padding: 0
+      margin-bottom: 80px
   footer
-    margin-top: 20px
     .footerInner
       +displayFlex
       +flexAlignItems(center)

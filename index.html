@@ -53,29 +53,40 @@
   </div>
     
   <div class="afterSplash" id="workTarget">
-    <article class="contentArticle mobileWork" id="mobileWork">
+    <article class="contentArticle desktopWork" id="work">
       <h2>My Work</h2>
 
-      <section class="mobileWorkSection">
-        <div id="expertsExchangeBlock" class="workBlock">
+      <div class="carouselWrapper">
+        <section class="imageContainer">
+          <div class="prev carouselButton"></div>
+          <div class="next carouselButton"></div>
+          <div id="carousel">
+            <div id="expertsExchange-carouselImage" class="image"></div>
+            <div id="apcEntertainment-carouselImage" class="image"></div>
+            <div id="friendQuest-carouselImage" class="image"></div>
+            <div id="animWork-carouselImage" class="image"></div>
+            <div id="moviePoster-carouselImage" class="image"></div>
+          </div>
+        </section>
+      </div>
+
+      <article class="descriptionBlock">
+        <section id="expertsExchangeDescriptionSection" class="descriptionSection active">
           <h3>Experts Exchange (Website)</h3>
-          <img src="img/mockups/ee-logo.png" alt="experts exchange logo" />
           <p class="workDescription">As a front end developer at Experts Exchange, I had the opportunity to work on a variety of projects and help create the look and feel of the site. The user profile redesign, the Live product redesign, and the creation of the Headlines feed are a few examples of my work. You can see more details on each below.</p>
 
-          <h4>Tools Used</h4>
-          <ul>
-            <li>HTML/CSS/JS</li>
-            <li>Photoshop</li>
-            <li>Illustrator</li>
-          </ul>
+          <div class="moreSection">
+            <h4>Tools Used</h4>
+            <ul>
+              <li>HTML/CSS/JS</li>
+              <li>Photoshop</li>
+              <li>Illustrator</li>
+            </ul>
 
-          <h4>Profile Page Redesign</h4>
-          <a href="img/experts-exchange/ee-profile-page.jpg" target="_blank" rel="noopener nofollow"><img src="img/experts-exchange/ee-profile-page.jpg" alt="experts exchange profile page"></a>
-          <p class="iterationDescription">Shown above is the new profile page that I built with my colleagues. Our goal was to have an initial "business card" view that would display information about the user's areas of expertise and skills. Farther down in the overview section, the user can give information on their background (work history, education, and biography) to serve as a r&eacute;sum&eacute;. There are four other sections that asynchronously load in, which are: the user's recent contributions on the site, certifications earned, ratings from Live or Gigs interactions, and endorsements that the user has given or received. On the right side, one can see the overall "level" of that user, see if the user has a "verified" account, and one can share the profile on social media. The profile owner also has a "preview" button. My role in this project was to create the HTML, CSS, and JS for more advanced user interactions &mdash; beyond what pure HTML and CSS can provide.</p>
+            <h4>Profile Page Redesign</h4>
+            <a href="img/experts-exchange/ee-profile-page.jpg" target="_blank" rel="noopener nofollow"><img src="img/experts-exchange/ee-profile-page.jpg" alt="experts exchange profile page"></a>
+            <p class="iterationDescription">Shown above is the new profile page that I built with my colleagues. Our goal was to have an initial "business card" view that would display information about the user's areas of expertise and skills. Farther down in the overview section, the user can give information on their background (work history, education, and biography) to serve as a r&eacute;sum&eacute;. There are four other sections that asynchronously load in, which are: the user's recent contributions on the site, certifications earned, ratings from Live or Gigs interactions, and endorsements that the user has given or received. On the right side, one can see the overall "level" of that user, see if the user has a "verified" account, and one can share the profile on social media. The profile owner also has a "preview" button. My role in this project was to create the HTML, CSS, and JS for more advanced user interactions &mdash; beyond what pure HTML and CSS can provide.</p>
 
-          <p class="showMore"><a class="showMoreLink" href="#eeMoreSection" rel="nofollow">Show more.</a></p>
-
-          <div class="moreSection" id="eeMoreSection">
             <h4>Live Product Redesign</h4>
             <a href="img/experts-exchange/ee-live-landing-logged-in.jpg" target="_blank" rel="noopener nofollow"><img src="img/experts-exchange/ee-live-landing-logged-in.jpg" alt="experts exchange live logged in"></a>
             <a href="img/experts-exchange/ee-live-help-request.jpg" target="_blank" rel="noopener nofollow"><img src="img/experts-exchange/ee-live-help-request.jpg" alt="experts exchange live help request"></a>
@@ -88,64 +99,70 @@
             <h4>Headlines Feed</h4>
             <a href="img/experts-exchange/ee-headlines.jpg" target="_blank" rel="noopener nofollow"><img src="img/experts-exchange/ee-headlines.jpg" alt="experts exchange headlines feed"></a>
             <p class="iterationDescription">Headlines is intended to be a place for users to see tech news from around the internet. Users have the ability to cater the feed to their needs by hiding specific stories or entire sources, and adding new sources by importing RSS feeds. I created the look and feel of the feed and worked with my team's UI designer to come up with the final "card" design. I also created the HTML and CSS needed to organize the cards at any screen size and adjust to any quantity.</p>
-
-            <p class="showLess"><a class="showLessLink" href="#expertsExchangeBlock" rel="nofollow">Show less.</a></p>
           </div>
-        </div>
-
-        <div id="apcEntertainmentBlock" class="workBlock">
-          <h3>APC Entertainment (Website and Logo Design)</h3>
-          <img src="img/mockups/apc-entertainment.png" alt="apc entertainment mockup" />
-          <p class="workDescription">This was a website that I designed and coded for an acquaintance. The client was a DJ and needed a site that would showcase the services he provided, allow potential customers to get a price quote through an interactive "quote calculator," provide a way for users to book an event, display a media library, and have a contact form for general inquiries. You can check out the live site <a href="http://apcentertainment.net" target="_blank" rel="noopener">here</a>.</p>
           
-          <h4>Tools Used</h4>
-          <ul>
-            <li>Illustrator</li>
-            <li>Photoshop</li>
-            <li>HTML/Sass/JS</li>
-          </ul>
+          <p class="showMore"><a class="showMoreLink" href="#expertsExchangeDescriptionSection" rel="nofollow">Show more.</a></p>
+          <p class="showLess"><a class="showLessLink" href="#work" rel="nofollow">Show less.</a></p>
+        </section>
 
-          <h4>Mockup Design</h4>
-          <a href="img/apc-entertainment/apc-entertainment-mockup.jpg" target="_blank" rel="noopener nofollow"><img src="img/apc-entertainment/apc-entertainment-mockup.jpg" alt="apc entertainment design"></a>
-          <p class="iterationDescription">This is the mockup that I made for the client for this project. You can find the live site <a href="http://apcentertainment.net" target="_blank" rel="noopener">here</a>.</p>
-        </div>
-
-        <div id="friendQuestBlock" class="workBlock">
-          <h3>Friend Quest (Podcast)</h3>
-          <img src="img/mockups/friend-quest.png" alt="friend quest mockup" />
-          <p class="workDescription">Friend Quest is a podcast that I do with my friends where we play tabletop role playing games. We each record our audio separately and then I edit all of the tracks in Audition to get the final cut. Then, I add the intro and outro music, record voiceovers for the intro and outro, and add some basic EQ and noise filtering. Finally, I export the final audio and bring it into Premier to create a video version of the episode as well. The cover artwork was done by <a href="http://www.peterfreeby.com/" target="_blank" rel="noopener">Peter Freeby</a>.</p>
-
-          <h4>Tools Used</h4>
-          <ul>
-            <li>Audition</li>
-            <li>Premier</li>
-          </ul>
-
-          <h4>Episodes</h4>
-          <iframe id="multi_iframe" class="friendQuestPlayer" frameborder="0" scrolling="no" allowfullscreen="" src="https://www.podbean.com/media/player/multi?playlist=http%3A%2F%2Fplaylist.podbean.com%2F1730596%2Fplaylist_multi.xml&vjs=1&kdsowie31j4k1jlf913=8f584dfca005a2747835a5a5d02cab7dd7b51145&size=240&share=1&fonts=Helvetica&auto=0&download=0&rtl=0&skin=11" width="100%" height="430"></iframe>
-        </div>
-
-        <div id="3dWorkBlock" class="workBlock">
-          <h3>3D Animation</h3>
-          <img src="img/mockups/anim-work-mockup.jpg" alt="animation work mockup" />
-          <p class="workDescription">You can find my current 3D animation demo reel on <a href="//vimeo.com/95346384" target="_blank">Vimeo</a>. Most of these are personal projects to practice and develop my skills, ranging from fluid simulations to create fire effects, to original character concepts. FireSwing Studios was a start up that I worked at for a couple summers. I created a 3D rendered splash screen for the app that we were working on. Although this splash screen was never implemented, it is still one of my favorite things that I have made.</p>
-
-          <h4>Tools Used</h4>
-          <ul>
-            <li>Maya</li>
-            <li>Premier</li>
-          </ul>
-
-          <h4>Cyber Spartan (Personal Project)</h4>
-          <a href="img/3d-work/spartan-v1-render.jpg" target="_blank" rel="noopener nofollow"><img src="img/3d-work/spartan-v1-render.jpg" alt="spartan v1 render"></a>
-          <a href="img/3d-work/spartan-v2-render.jpg" target="_blank" rel="noopener nofollow"><img src="img/3d-work/spartan-v2-render.jpg" alt="spartan v2 render"></a>
-          <a href="img/3d-work/spartan-v3-render.jpg" target="_blank" rel="noopener nofollow"><img src="img/3d-work/spartan-v3-render.jpg" alt="spartan v3 render"></a>
-          <a href="img/3d-work/spartan-v4-render.jpg" target="_blank" rel="noopener nofollow"><img src="img/3d-work/spartan-v4-render.jpg" alt="spartan v4 render"></a>
-          <p class="iterationDescription">These are some variations of a "cyber spartan" character that I created.</p>
-
-          <p class="showMore"><a class="showMoreLink" href="#3dWorkBlock" rel="nofollow">Show more.</a></p>
+        <section id="apcEntertainmentDescriptionSection" class="descriptionSection">
+          <h3>APC Entertainment (Website and Logo Design)</h3>
+          <p class="workDescription">This was a website that I designed and coded for an acquaintance. The client was a DJ and needed a site that would showcase the services he provided, allow potential customers to get a price quote through an interactive "quote calculator," provide a way for users to book an event, display a media library, and have a contact form for general inquiries. You can check out the live site <a href="http://apcentertainment.net" target="_blank" rel="noopener">here</a>.</p>
 
           <div class="moreSection">
+            <h4>Tools Used</h4>
+            <ul>
+              <li>Illustrator</li>
+              <li>Photoshop</li>
+              <li>HTML/Sass/JS</li>
+            </ul>
+
+            <h4>Mockup Design</h4>
+            <a href="img/apc-entertainment/apc-entertainment-mockup.jpg" target="_blank" rel="noopener nofollow"><img src="img/apc-entertainment/apc-entertainment-mockup.jpg" alt="apc entertainment design"></a>
+            <p class="iterationDescription">This is the mockup that I made for the client for this project.</p>
+          </div>
+          
+          <p class="showMore"><a class="showMoreLink" href="#apcEntertainmentDescriptionSection" rel="nofollow">Show more.</a></p>
+          <p class="showLess"><a class="showLessLink" href="#work" rel="nofollow">Show less.</a></p>
+        </section>
+
+        <section id="friendQuestDescriptionSection" class="descriptionSection">
+          <h3>Friend Quest (Podcast)</h3>
+          <p class="workDescription">Friend Quest is a podcast that I do with my friends where we play tabletop role playing games. We each record our audio separately and then I edit all of the tracks in Audition to get the final cut. Then, I add the intro and outro music, record voiceovers for the intro and outro, and add some basic EQ and noise filtering. Finally, I export the final audio and bring it into Premier to create a video version of the episode as well. The cover artwork was done by <a href="http://www.peterfreeby.com/" target="_blank" rel="noopener">Peter Freeby</a>.</p>
+
+          <div class="moreSection">
+            <h4>Tools Used</h4>
+            <ul>
+              <li>Audition</li>
+              <li>Premier</li>
+            </ul>
+
+            <h4>Episodes</h4>
+            <iframe id="multi_iframe" class="friendQuestPlayer" frameborder="0" scrolling="no" allowfullscreen="" src="https://www.podbean.com/media/player/multi?playlist=http%3A%2F%2Fplaylist.podbean.com%2F1730596%2Fplaylist_multi.xml&vjs=1&kdsowie31j4k1jlf913=8f584dfca005a2747835a5a5d02cab7dd7b51145&size=315&share=1&fonts=Helvetica&auto=0&download=0&rtl=0&skin=11" width="100%" height="505"></iframe>
+          </div>
+
+          <p class="showMore"><a class="showMoreLink" href="#friendQuestDescriptionSection" rel="nofollow">Show more.</a></p>
+          <p class="showLess"><a class="showLessLink" href="#work" rel="nofollow">Show less.</a></p>
+        </section>
+
+        <section id="3dDescriptionSection" class="descriptionSection">
+          <h3>3D Animation</h3>
+          <p class="workDescription">You can find my current 3D animation demo reel on <a href="//vimeo.com/95346384" target="_blank" rel="noopener">Vimeo</a>. Most of these are personal projects to practice and develop my skills, ranging from fluid simulations to create fire effects, to original character concepts. FireSwing Studios was a start up that I worked at for a couple summers. I created a 3D rendered splash screen for the app that we were working on. Although this splash screen was never implemented, it is still one of my favorite things that I have made.</p>
+
+          <div class="moreSection">
+            <h4>Tools Used</h4>
+            <ul>
+              <li>Maya</li>
+              <li>Premier</li>
+            </ul>
+
+            <h4>Cyber Spartan (Personal Project)</h4>
+            <a href="img/3d-work/spartan-v1-render.jpg" target="_blank" rel="noopener nofollow"><img src="img/3d-work/spartan-v1-render.jpg" alt="spartan v1 render"></a>
+            <a href="img/3d-work/spartan-v2-render.jpg" target="_blank" rel="noopener nofollow"><img src="img/3d-work/spartan-v2-render.jpg" alt="spartan v2 render"></a>
+            <a href="img/3d-work/spartan-v3-render.jpg" target="_blank" rel="noopener nofollow"><img src="img/3d-work/spartan-v3-render.jpg" alt="spartan v3 render"></a>
+            <a href="img/3d-work/spartan-v4-render.jpg" target="_blank" rel="noopener nofollow"><img src="img/3d-work/spartan-v4-render.jpg" alt="spartan v4 render"></a>
+            <p class="iterationDescription">These are some variations of a "cyber spartan" character that I created.</p>
+
             <h4>FireSwing Studios (Splash Screen)</h4>
             <a href="img/fireswing-splash/fireswing-v1.jpg" target="_blank" rel="noopener nofollow"><img src="img/fireswing-splash/fireswing-v1.jpg" alt="fireswing v1"></a>
             <p class="iterationDescription">This is the first version of the splash screen. I was still experimenting with the fluid dynamics to get the right look for the flame.</p>
@@ -161,9 +178,188 @@
 
             <a href="img/fireswing-splash/fireswing-final.jpg" target="_blank" rel="noopener nofollow"><img src="img/fireswing-splash/fireswing-final.jpg" alt="fireswing final"></a>
             <p class="iterationDescription">This is a screenshot of the final render. You can see the full animation in my demo reel on <a href="//vimeo.com/95346384" target="_blank" rel="noopener">Vimeo</a>.</p>
-
-            <p class="showLess"><a class="showLessLink" href="#3dWorkBlock" rel="nofollow">Show less.</a></p>
           </div>
+          
+          <p class="showMore"><a class="showMoreLink" href="#3dDescriptionSection" rel="nofollow">Show more.</a></p>
+          <p class="showLess"><a class="showLessLink" href="#work" rel="nofollow">Show less.</a></p>
+        </section>
+
+        <section id="moviePosterDescriptionSection" class="descriptionSection">
+          <h3>Movie Poster Mockup (Graphic Design)</h3>
+          <p class="workDescription">I had a class design project to create a movie poster for a fictitious film. I was only limited by the titles and images I could use; I could use these however I saw fit; there were other constraints, like needing to use a certain format for the bottom copy and movie rating graphics.</p>
+
+          <div class="moreSection">
+            <h4>Tools Used</h4>
+            <ul>
+              <li>InDesign</li>
+              <li>Photoshop</li>
+              <li>Illustrator</li>
+            </ul>
+
+            <h4>Iterations</h4>
+            <a href="img/movie-poster/msandberg-218-movie-poster-v1.jpg" target="_blank" rel="noopener nofollow"><img src="img/movie-poster/msandberg-218-movie-poster-v1.jpg" alt="msandberg 218 movie poster v1"></a>
+            <p class="iterationDescription">This was my first pass at this poster.</p>
+
+            <a href="img/movie-poster/msandberg-218-movie-poster-v2.jpg" target="_blank" rel="noopener nofollow"><img src="img/movie-poster/msandberg-218-movie-poster-v2.jpg" alt="msandberg 218 movie poster v2"></a>
+            <p class="iterationDescription">Playing with alignment, spacing and overall size of the elements.</p>
+
+            <a href="img/movie-poster/msandberg-218-movie-poster-final.jpg" target="_blank" rel="noopener nofollow"><img src="img/movie-poster/msandberg-218-movie-poster-final.jpg" alt="msandberg 218 movie poster final"></a>
+            <p class="iterationDescription">This was the final product, complete with blood-spatter graphic.</p>
+          </div>
+          
+          <p class="showMore"><a class="showMoreLink" href="#moviePosterDescriptionSection" rel="nofollow">Show more.</a></p>
+          <p class="showLess"><a class="showLessLink" href="#work" rel="nofollow">Show less.</a></p>
+        </section>
+      </article>
+    </article>
+
+    <article class="contentArticle mobileWork" id="mobileWork">
+      <h2>My Work</h2>
+
+      <section class="mobileWorkSection">
+        <div id="expertsExchangeBlock" class="workBlock">
+          <img src="img/mockups/ee-logo.jpg" alt="experts exchange logo" />
+          <h3>Experts Exchange (Website)</h3>
+          <p class="workDescription">As a front end developer at Experts Exchange, I had the opportunity to work on a variety of projects and help create the look and feel of the site. The user profile redesign, the Live product redesign, and the creation of the Headlines feed are a few examples of my work. You can see more details on each below.</p>
+
+          <div class="moreSection">
+            <h4>Tools Used</h4>
+            <ul>
+              <li>HTML/CSS/JS</li>
+              <li>Photoshop</li>
+              <li>Illustrator</li>
+            </ul>
+
+            <h4>Profile Page Redesign</h4>
+            <a href="img/experts-exchange/ee-profile-page.jpg" target="_blank" rel="noopener nofollow"><img src="img/experts-exchange/ee-profile-page.jpg" alt="experts exchange profile page"></a>
+            <p class="iterationDescription">Shown above is the new profile page that I built with my colleagues. Our goal was to have an initial "business card" view that would display information about the user's areas of expertise and skills. Farther down in the overview section, the user can give information on their background (work history, education, and biography) to serve as a r&eacute;sum&eacute;. There are four other sections that asynchronously load in, which are: the user's recent contributions on the site, certifications earned, ratings from Live or Gigs interactions, and endorsements that the user has given or received. On the right side, one can see the overall "level" of that user, see if the user has a "verified" account, and one can share the profile on social media. The profile owner also has a "preview" button. My role in this project was to create the HTML, CSS, and JS for more advanced user interactions &mdash; beyond what pure HTML and CSS can provide.</p>
+
+            <h4>Live Product Redesign</h4>
+            <a href="img/experts-exchange/ee-live-landing-logged-in.jpg" target="_blank" rel="noopener nofollow"><img src="img/experts-exchange/ee-live-landing-logged-in.jpg" alt="experts exchange live logged in"></a>
+            <a href="img/experts-exchange/ee-live-help-request.jpg" target="_blank" rel="noopener nofollow"><img src="img/experts-exchange/ee-live-help-request.jpg" alt="experts exchange live help request"></a>
+            <p class="iterationDescription">The Live product allows clients to connect with consultants in a one-on-one conversation to get help with coding problems. The problem we were facing was that clients didn't know how to get started with the product. Previously, we showed a list of all available consultants and allowed clients to connect with anyone they chose, so the requests were not always a good fit and both sides got frustrated. To solve this problem, we streamlined the whole process by making the help request form front and center for the client. We also gave consultants the ability to specify which topics they were willing to help in. My role in this project was to mock up the initial designs in Photoshop for the help request page that lists the consultants available for a given request, and then to code all of the CSS to pull it off. I also provided new HTML structure when the need arose to work beyond what was already in place.</p>
+
+            <h4>Live Landing Page</h4>
+            <a href="img/experts-exchange/ee-live-landing-logged-out.jpg" target="_blank" rel="noopener nofollow"><img src="img/experts-exchange/ee-live-landing-logged-out.jpg" alt="experts exchange live logged out"></a>
+            <p class="iterationDescription">Shown above is the Live product's logged out view. The purpose of this page was to show the viewer why Live is valuable, how it works, and what users like about it &mdash; all in a well-designed and easy to use interface. I took the mockup provided by our UI team and created all the HTML and CSS needed to bring the page to life.</p>
+
+            <h4>Headlines Feed</h4>
+            <a href="img/experts-exchange/ee-headlines.jpg" target="_blank" rel="noopener nofollow"><img src="img/experts-exchange/ee-headlines.jpg" alt="experts exchange headlines feed"></a>
+            <p class="iterationDescription">Headlines is intended to be a place for users to see tech news from around the internet. Users have the ability to cater the feed to their needs by hiding specific stories or entire sources, and adding new sources by importing RSS feeds. I created the look and feel of the feed and worked with my team's UI designer to come up with the final "card" design. I also created the HTML and CSS needed to organize the cards at any screen size and adjust to any quantity.</p>
+          </div>
+          
+          <p class="showMore"><a class="showMoreLink" href="#expertsExchangeBlock" rel="nofollow">Show more.</a></p>
+          <p class="showLess"><a class="showLessLink" href="#expertsExchangeBlock" rel="nofollow">Show less.</a></p>
+        </div>
+
+        <div id="apcEntertainmentBlock" class="workBlock">
+          <img src="img/mockups/apc-entertainment.png" alt="apc entertainment mockup" />
+          <h3>APC Entertainment (Website and Logo Design)</h3>
+          <p class="workDescription">This was a website that I designed and coded for an acquaintance. The client was a DJ and needed a site that would showcase the services he provided, allow potential customers to get a price quote through an interactive "quote calculator," provide a way for users to book an event, display a media library, and have a contact form for general inquiries. You can check out the live site <a href="http://apcentertainment.net" target="_blank" rel="noopener">here</a>.</p>
+
+          <div class="moreSection">
+            <h4>Tools Used</h4>
+            <ul>
+              <li>Illustrator</li>
+              <li>Photoshop</li>
+              <li>HTML/Sass/JS</li>
+            </ul>
+
+            <h4>Mockup Design</h4>
+            <a href="img/apc-entertainment/apc-entertainment-mockup.jpg" target="_blank" rel="noopener nofollow"><img src="img/apc-entertainment/apc-entertainment-mockup.jpg" alt="apc entertainment design"></a>
+            <p class="iterationDescription">This is the mockup that I made for the client for this project.</p>
+          </div>
+          
+          <p class="showMore"><a class="showMoreLink" href="#apcEntertainmentBlock" rel="nofollow">Show more.</a></p>
+          <p class="showLess"><a class="showLessLink" href="#apcEntertainmentBlock" rel="nofollow">Show less.</a></p>
+        </div>
+
+        <div id="friendQuestBlock" class="workBlock">
+          <img src="img/mockups/friend-quest.png" alt="friend quest mockup" />
+          <h3>Friend Quest (Podcast)</h3>
+          <p class="workDescription">Friend Quest is a podcast that I do with my friends where we play tabletop role playing games. We each record our audio separately and then I edit all of the tracks in Audition to get the final cut. Then, I add the intro and outro music, record voiceovers for the intro and outro, and add some basic EQ and noise filtering. Finally, I export the final audio and bring it into Premier to create a video version of the episode as well. The cover artwork was done by <a href="http://www.peterfreeby.com/" target="_blank" rel="noopener">Peter Freeby</a>.</p>
+
+          <div class="moreSection">
+            <h4>Tools Used</h4>
+            <ul>
+              <li>Audition</li>
+              <li>Premier</li>
+            </ul>
+
+            <h4>Episodes</h4>
+            <iframe id="multi_iframe" class="friendQuestPlayer" frameborder="0" scrolling="no" allowfullscreen="" src="https://www.podbean.com/media/player/multi?playlist=http%3A%2F%2Fplaylist.podbean.com%2F1730596%2Fplaylist_multi.xml&vjs=1&kdsowie31j4k1jlf913=8f584dfca005a2747835a5a5d02cab7dd7b51145&size=240&share=1&fonts=Helvetica&auto=0&download=0&rtl=0&skin=11" width="100%" height="430"></iframe>
+          </div>
+          
+          <p class="showMore"><a class="showMoreLink" href="#friendQuestBlock" rel="nofollow">Show more.</a></p>
+          <p class="showLess"><a class="showLessLink" href="#friendQuestBlock" rel="nofollow">Show less.</a></p>
+        </div>
+
+        <div id="3dWorkBlock" class="workBlock">
+          <img src="img/mockups/anim-work-mockup.jpg" alt="img 1" />
+          <h3>3D Animation</h3>
+          <p class="workDescription">You can find my current 3D animation demo reel on <a href="//vimeo.com/95346384" target="_blank">Vimeo</a>. Most of these are personal projects to practice and develop my skills, ranging from fluid simulations to create fire effects, to original character concepts. FireSwing Studios was a start up that I worked at for a couple summers. I created a 3D rendered splash screen for the app that we were working on. Although this splash screen was never implemented, it is still one of my favorite things that I have made.</p>
+
+          <div class="moreSection">
+            <h4>Tools Used</h4>
+            <ul>
+              <li>Maya</li>
+              <li>Premier</li>
+            </ul>
+
+            <h4>Cyber Spartan (Personal Project)</h4>
+            <a href="img/3d-work/spartan-v1-render.jpg" target="_blank" rel="noopener nofollow"><img src="img/3d-work/spartan-v1-render.jpg" alt="spartan v1 render"></a>
+            <a href="img/3d-work/spartan-v2-render.jpg" target="_blank" rel="noopener nofollow"><img src="img/3d-work/spartan-v2-render.jpg" alt="spartan v2 render"></a>
+            <a href="img/3d-work/spartan-v3-render.jpg" target="_blank" rel="noopener nofollow"><img src="img/3d-work/spartan-v3-render.jpg" alt="spartan v3 render"></a>
+            <a href="img/3d-work/spartan-v4-render.jpg" target="_blank" rel="noopener nofollow"><img src="img/3d-work/spartan-v4-render.jpg" alt="spartan v4 render"></a>
+            <p class="iterationDescription">These are some variations of a "cyber spartan" character that I created.</p>
+
+            <h4>FireSwing Studios (Splash Screen)</h4>
+            <a href="img/fireswing-splash/fireswing-v1.jpg" target="_blank" rel="noopener nofollow"><img src="img/fireswing-splash/fireswing-v1.jpg" alt="fireswing v1"></a>
+            <p class="iterationDescription">This is the first version of the splash screen. I was still experimenting with the fluid dynamics to get the right look for the flame.</p>
+
+            <a href="img/fireswing-splash/fireswing-v2.jpg" target="_blank" rel="noopener nofollow"><img src="img/fireswing-splash/fireswing-v2.jpg" alt="fireswing v2"></a>
+            <p class="iterationDescription">At this point, I had fine-tuned the fluid effects to get the desired look for the flames.</p>
+
+            <a href="img/fireswing-splash/fireswing-v3.jpg" target="_blank" rel="noopener nofollow"><img src="img/fireswing-splash/fireswing-v3.jpg" alt="fireswing v3"></a>
+            <p class="iterationDescription">We wanted to try a lighter colored background.</p>
+
+            <a href="img/fireswing-splash/fireswing-v4.jpg" target="_blank" rel="noopener nofollow"><img src="img/fireswing-splash/fireswing-v4.jpg" alt="fireswing v4"></a>
+            <p class="iterationDescription">It was requested to have a glass-breaking effect, just to see how it would look.</p>
+
+            <a href="img/fireswing-splash/fireswing-final.jpg" target="_blank" rel="noopener nofollow"><img src="img/fireswing-splash/fireswing-final.jpg" alt="fireswing final"></a>
+            <p class="iterationDescription">This is a screenshot of the final render. You can see the full animation in my demo reel on <a href="//vimeo.com/95346384" target="_blank" rel="noopener">Vimeo</a>.</p>
+          </div>
+          
+          <p class="showMore"><a class="showMoreLink" href="#3dWorkBlock" rel="nofollow">Show more.</a></p>
+          <p class="showLess"><a class="showLessLink" href="#3dWorkBlock" rel="nofollow">Show less.</a></p>
+        </div>
+
+        <div id="moviePosterWorkBlock" class="workBlock">
+          <img src="img/mockups/movie-poster-mockup.jpg" alt="img 3" />
+          <h3>Movie Poster Mockup (Graphic Design)</h3>
+          <p class="workDescription">I had a class design project to create a movie poster for a fictitious film. I was only limited by the titles and images I could use; I could use these however I saw fit; there were other constraints, like needing to use a certain format for the bottom copy and movie rating graphics.</p>
+
+          <div class="moreSection">
+            <h4>Tools Used</h4>
+            <ul>
+              <li>InDesign</li>
+              <li>Photoshop</li>
+              <li>Illustrator</li>
+            </ul>
+
+            <h4>Iterations</h4>
+            <a href="img/movie-poster/msandberg-218-movie-poster-v1.jpg" target="_blank" rel="noopener nofollow"><img src="img/movie-poster/msandberg-218-movie-poster-v1.jpg" alt="msandberg 218 movie poster v1"></a>
+            <p class="iterationDescription">This was my first pass at this poster.</p>
+
+            <a href="img/movie-poster/msandberg-218-movie-poster-v2.jpg" target="_blank" rel="noopener nofollow"><img src="img/movie-poster/msandberg-218-movie-poster-v2.jpg" alt="msandberg 218 movie poster v2"></a>
+            <p class="iterationDescription">Playing with alignment, spacing and overall size of the elements.</p>
+
+            <a href="img/movie-poster/msandberg-218-movie-poster-final.jpg" target="_blank" rel="noopener nofollow"><img src="img/movie-poster/msandberg-218-movie-poster-final.jpg" alt="msandberg 218 movie poster final"></a>
+            <p class="iterationDescription">This was the final product, complete with blood-spatter graphic.</p>
+          </div>
+          
+          <p class="showMore"><a class="showMoreLink" href="#moviePosterWorkBlock" rel="nofollow">Show more.</a></p>
+          <p class="showLess"><a class="showLessLink" href="#moviePosterWorkBlock" rel="nofollow">Show less.</a></p>
         </div>
       </section>
     </article>
