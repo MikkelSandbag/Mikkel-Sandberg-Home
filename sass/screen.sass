@@ -4,8 +4,8 @@
   Import this file using the following HTML or equivalent:
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
 
-@import reset.css
-@import font-awesome.min.css
+@import "reset.css"
+@import "font-awesome.min.css"
 
 // fonts
 /* latin-ext */
@@ -266,16 +266,17 @@ a
         background-size: 100%
         background-color: #fff
         background-position: center
+        &#github-carouselImage
+          background-image: url(../img/mockups/github-logo.jpg)
+          border: 1px solid #858585
         &#expertsExchange-carouselImage
           background-image: url(../img/mockups/ee-logo.jpg)
         &#apcEntertainment-carouselImage
-          background-image: url(../img/mockups/apc-entertainment.png)
+          background-image: url(../img/mockups/apc-entertainment.jpg)
         &#animWork-carouselImage
           background-image: url(../img/mockups/anim-work-mockup.jpg)
-        &#moviePoster-carouselImage
-          background-image: url(../img/mockups/movie-poster-mockup.jpg)
         &#friendQuest-carouselImage
-          background-image: url(../img/mockups/friend-quest.png)
+          background-image: url(../img/mockups/friend-quest.jpg)
 
 .mobileWork
   display: none
@@ -477,8 +478,11 @@ footer
   .mobileWork
     display: block
   .workBlock
+    $w: &
     margin: -48px 0 48px
     padding-top: 48px
+    &#githubBlock img
+      border: 1px solid #858585
     img
       width: 100%
       margin-bottom: 20px
