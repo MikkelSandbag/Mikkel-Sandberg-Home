@@ -241,26 +241,6 @@ const watchMoreToggle = function() {
   });
 };
 
-const toggleLinkTopVis = function() {
-  $(window).scroll(function() {
-    if ($(window).scrollTop() >= $(window).height()) {
-      $('.topLink').addClass('show');
-    } else {
-      $('.topLink').removeClass('show');
-    }
-  });
-};
-
-const toggleLinkTopSticky = function() {
-  $(window).scroll(function() {
-    if ($(window).scrollTop() >= $('footer').position().top) {
-      $('.topLink').addClass('notFixed');
-    } else {
-      $('.topLink').removeClass('notFixed');
-    }
-  });
-};
-
 // smooth scroll courtesy of Karl Swedberg: http://www.learningjquery.com/2007/10/improved-animated-scrolling-script-for-same-page-links
 const initSmoothScroll = function() {
   $(function() {
@@ -291,7 +271,5 @@ $(document).ready(function() {
   watchNextButton();
   watchPrevButton();
   watchMoreToggle();
-  toggleLinkTopVis();
-  toggleLinkTopSticky();
   initSmoothScroll();
 });

@@ -1,74 +1,26 @@
-/*
-  Welcome to Compass.
-  In this file you should write your main styles. (or centralize your imports)
-  Import this file using the following HTML or equivalent:
-  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+//  Welcome to Compass.
+//  In this file you should write your main styles. (or centralize your imports)
+//  Import this file using the following HTML or equivalent:
+//  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
 
 @import "reset.css"
 @import "font-awesome.min.css"
-
-// fonts
-/* latin-ext */
-@font-face
-  font-family: 'Oswald'
-  font-style: normal
-  font-weight: 300
-  src: url(../fonts/Oswald-Light.ttf)
-  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF
-/* latin */
-@font-face 
-  font-family: 'Oswald'
-  font-style: normal
-  font-weight: 300
-  src: url(../fonts/Oswald-Light.ttf)
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000
-
-/* latin-ext */
-@font-face 
-  font-family: 'Oswald'
-  font-style: normal
-  font-weight: 400
-  src: url(../fonts/Oswald-Regular.ttf)
-  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF
-
-/* latin */
-@font-face 
-  font-family: 'Oswald'
-  font-style: normal
-  font-weight: 400
-  src: url(../fonts/Oswald-Regular.ttf)
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000
-
-/* latin-ext */
-@font-face 
-  font-family: 'Oswald'
-  font-style: normal
-  font-weight: 700
-  src: url(../fonts/Oswald-Bold.ttf)
-  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF
-
-/* latin */
-@font-face 
-  font-family: 'Oswald'
-  font-style: normal
-  font-weight: 700
-  src: url(../fonts/Oswald-Bold.ttf)
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000
-
+@import url("https://use.typekit.net/eub4vfm.css")
 
 // variables
-$h1Color: #195bad
-$h2Color: #5ba9c2
-$h3Color: #a85950
-$linkColor: #cc514a
-$navBackgroundColor: #ccc
-$bodyTextColor: #333
+$headingColor: #008abe
+$linkColor: #00a3e0
+$navBackgroundColor: #f1f2f2
+$bodyTextColor: #58595b
 
 // mixins
+=headingFont
+  font-family: 'Oswald', sans-serif
+=bodyFont
+  font-family: 'Lato', sans-serif
+  font-weight: 300
 =transition
   transition: all 0.26s ease-in-out
-=headingText
-  text-transform: uppercase
 =vertAndHorizCenter
   position: absolute
   top: 50%
@@ -99,7 +51,7 @@ $bodyTextColor: #333
 html
   font-size: 16px
 body
-  font-family: 'Oswald', sans-serif
+  +bodyFont
   .loadingText
     display: none
   &.loading
@@ -110,8 +62,9 @@ body
       +vertAndHorizCenter
       position: fixed
       h6
+        +headingFont
         font-size: 2rem
-        color: $h3Color
+        color: $headingColor
         text-align: center
       p
         text-align: center
@@ -125,34 +78,35 @@ body
       background-color: #fff
       z-index: 2000
 h1
+  +headingFont
   font-size: 3rem
   line-height: 1.2em
-  color: $bodyTextColor
+  color: #000
   text-align: center
   background-color: rgba(255,255,255,0.4)
   padding: 70px
   width: 650px
   box-sizing: border-box
   +vertAndHorizCenter
-  +headingText
 h2
+  +headingFont
   font-size: 3rem
   line-height: 1.2em
-  color: $h2Color
+  color: $headingColor
   margin-bottom: 100px
-  +headingText
 h3
   font-size: 1.5rem
+  font-weight: 400
   line-height: 1.2em
-  color: $h3Color
+  color: $bodyTextColor
   margin-bottom: 20px
-  +headingText
 h4
   @extend h3
 p
+  font-size: 1.25rem
+  font-weight: 300
   color: $bodyTextColor
   text-align: left
-  font-size: 1.25rem
   line-height: 2rem
 a
   &:link, &:visited
@@ -239,11 +193,11 @@ a
       &:hover:before
         transform: translate(-50%, -50%) scale(1.1)
     .prev
-      left: -120px
+      left: -185px
       &:before
         content: "\f104"
     .next
-      right: -120px
+      right: -185px
       &:before
         content: "\f105"
 
@@ -332,7 +286,6 @@ a
       text-indent: 10px
       &:before
         content: "\2012"
-        font-weight: 600
         margin-right: 5px
   img
     width: 100%
@@ -407,32 +360,6 @@ a
     &.youtube:before
       background-position: 0 -171px
 
-// link to top
-.topLink
-  display: none
-  position: fixed
-  bottom: 20px
-  right: 5px
-  z-index: 1000
-  transition: none
-  &:link, &:visited
-    color: $bodyTextColor
-    font:
-      size: 2rem
-      weight: 100
-  &:before
-    display: block
-    content: '\f106'
-    font:
-      family: 'FontAwesome'
-      size: 2.5rem
-    text-align: center
-  &.show
-    display: block !important
-  &.notFixed
-    position: absolute
-    bottom: 180px
-
 //footer
 footer
   background-color: $navBackgroundColor
@@ -460,7 +387,7 @@ footer
           box-shadow: 0 0 5px 0 #bbb
           transform: none
 
-@media only screen and (max-width: 767px)
+@media only screen and (max-width: 820px)
   h1
     font-size: 2rem
     padding: 50px
