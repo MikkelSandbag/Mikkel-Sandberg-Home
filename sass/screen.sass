@@ -1,7 +1,7 @@
-//  Welcome to Compass.
-//  In this file you should write your main styles. (or centralize your imports)
-//  Import this file using the following HTML or equivalent:
-//  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+/*  Welcome to Compass.
+    In this file you should write your main styles. (or centralize your imports)
+    Import this file using the following HTML or equivalent:
+    <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "reset.css"
 @import "font-awesome.min.css"
@@ -82,7 +82,7 @@ h1
   font-size: 5rem
   line-height: 1.2em
   color: #fff
-  text-shadow: 5px 5px 10px #000
+  text-shadow: 2px 2px 6px #000
   text-align: center
   padding: 20px
   width: 100%
@@ -126,10 +126,6 @@ a
   left: 50%
   transform: translate(-50%, -50%)
   z-index: 1
-  a
-    position: absolute
-    bottom: 0
-    left: 5rem
   .heroImage
     background-color: $bodyTextColor
     &:before
@@ -141,19 +137,25 @@ a
       display: block
       width: 100vw
       height: 100vh
-.next-arrow
-  font-size: 8rem
-  color: #fff
-  position: absolute
-  bottom: 0
-  left: 50%
-  transform: translateX(-50%)
-  animation: arrow-bounce 2s infinite
-  @keyframes arrow-bounce
-    0%, 100%
-      transform: translateY(0) translateX(-50%)
-    50%
-      transform: translateY(-20px) translateX(-50%)
+
+  #nextArrowOuter
+    position: absolute
+    bottom: 0
+    left: 5rem
+    .next-arrow
+      font-size: 8rem
+      color: #fff
+      text-shadow: 2px 2px 6px #000
+      position: absolute
+      bottom: 0
+      left: 50%
+      transform: translateX(-50%)
+      animation: arrow-bounce 2s infinite
+      @keyframes arrow-bounce
+        0%, 100%
+          transform: translateY(0) translateX(-50%)
+        50%
+          transform: translateY(-20px) translateX(-50%)
     
 // after splash sections
 .afterSplash
@@ -453,6 +455,13 @@ footer
 @media only screen and (max-width: 767px)
   h1
     font-size: 3rem
+
+  .mainSplash
+    #nextArrowOuter
+      left: 50%
+      transform: translateX(-50%)
+      .next-arrow
+        font-size: 6rem
 
 @media only screen and (max-height: 376px)
   h1 
