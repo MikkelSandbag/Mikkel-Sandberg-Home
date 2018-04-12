@@ -79,15 +79,16 @@ body
       z-index: 2000
 h1
   +headingFont
-  font-size: 3rem
+  font-size: 5rem
   line-height: 1.2em
-  color: #000
+  color: #fff
+  text-shadow: 5px 5px 10px #000
   text-align: center
-  background-color: rgba(255,255,255,0.4)
-  padding: 70px
-  width: 650px
+  padding: 20px
+  width: 100%
   box-sizing: border-box
   +vertAndHorizCenter
+  top: 28%
 h2
   +headingFont
   font-size: 3rem
@@ -128,17 +129,18 @@ a
   a
     position: absolute
     bottom: 0
-    left: 50%
-    transform: translateX(-50%)
-  .heroImage:before
-    content: ''
-    background-image: url(../img/mikkel-hero-image.jpg)
-    background-size: cover
-    background-repeat: no-repeat
-    background-position: center center
-    display: block
-    width: 100vw
-    height: 100vh
+    left: 5rem
+  .heroImage
+    background-color: $bodyTextColor
+    &:before
+      content: ''
+      background-image: url(../img/mikkel-suit.png)
+      background-size: auto 50%
+      background-repeat: no-repeat
+      background-position: center bottom
+      display: block
+      width: 100vw
+      height: 100vh
 .next-arrow
   font-size: 8rem
   color: #fff
@@ -388,17 +390,8 @@ footer
           transform: none
 
 @media only screen and (max-width: 820px)
-  h1
-    font-size: 2rem
-    padding: 50px
-    width: 100%
-    max-width: 450px
-
   h2
     margin-bottom: 48px
-
-  .next-arrow
-    font-size: 5rem
 
   .desktopWork
     display: none
@@ -456,3 +449,11 @@ footer
   .topLink
     &.notFixed
       bottom: 180px
+
+@media only screen and (max-width: 767px)
+  h1
+    font-size: 3rem
+
+@media only screen and (max-height: 376px)
+  h1 
+    font-size: 3rem
