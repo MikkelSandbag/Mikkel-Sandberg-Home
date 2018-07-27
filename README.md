@@ -1,4 +1,4 @@
 # Mikkel-Sandberg-Home
 This is the repo for my personal website.
 
-Live site: http://mikkelsandberg.com/
+Replaced by https://github.com/MikkelSandbag/portfolio-site-2018
